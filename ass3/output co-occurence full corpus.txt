@@ -1,0 +1,641 @@
+car
+truck, toyota, vehicle
+vehicle, driver, truck
+motorcycle, chassis, motorcycle
+motor, racing, automobile
+racing, chevrolet, train
+automobile, nascar, bus
+bicycle, ferrari, boat
+driver, bmw, motor
+bus, truck, aircraft
+rail, axle, bicycle
+boat, motor, engine
+train, gt, racing
+race, v8, driver
+ford, wheel, locomotive
+bike, f1, horse
+crash, formula, ford
+auto, lap, van
+freight, ford, formula
+passenger, porsche, ship
+formula, auto, auto
+*********
+bus
+commuter, commuter, rail
+transit, transit, train
+rail, rail, tram
+tram, tram, ferry
+passenger, passenger, car
+operator, metro, operator
+ferry, interchange, taxi
+transport, terminal, road
+metro, freight, transit
+interchange, amtrak, railway
+terminal, subway, vehicle
+freight, terminus, passenger
+train, transport, line
+taxi, tramway, bicycle
+shuttle, route, metro
+connect, taxi, route
+route, transportation, highway
+truck, ferry, railroad
+express, depot, freight
+rout, hub, subway
+*********
+hospital
+clinic, clinic, clinic
+psychiatric, medical, home
+medical, nursing, school
+nh, psychiatric, facility
+care, surgical, hotel
+nursing, healthcare, library
+facility, rehabilitation, center
+patient, surgery, camp
+hopkins, psychiatry, museum
+charity, care, ward
+bed, health, prison
+health, patient, college
+memorial, psychiatrist, institution
+mercy, nh, airport
+college, acute, office
+trust, medicine, store
+presbyterian, clinical, centre
+institution, dental, theatre
+mental, diagnosis, house
+teaching, pharmacy, laboratory
+*********
+hotel
+luxury, restaurant, restaurant
+plaza, inn, store
+casino, casino, resort
+resort, resort, building
+near, plaza, shop
+restaurant, tourist, inn
+dining, luxury, theater
+shopping, shop, house
+windsor, dining, palace
+chain, renovate, apartment
+room, attraction, park
+nearby, accommodation, factory
+inn, retail, theatre
+riverside, tavern, station
+hilton, apartment, casino
+apartment, mall, home
+savoy, shopping, tower
+palace, cater, facility
+grand, pub, residence
+theatre, demolish, hall
+*********
+gun
+cannon, launcher, cannon
+anti-aircraft, anti-aircraft, artillery
+artillery, turret, pistol
+fire, ammunition, rifle
+machine, cannon, weapon
+tank, armament, mortar
+rifle, rifle, shotgun
+heavy, mortar, fire
+mortar, grenade, battery
+battery, artillery, camera
+armament, projectile, engine
+mm, battery, turret
+enemy, tank, tube
+turret, weapon, rocket
+weapon, fire, unit
+ammunition, mm, ammunition
+gunner, armored, tank
+radar, firing, vehicle
+laser, battleship, ship
+aa, gunner, machine
+*********
+bomb
+bombing, explode, bombing
+explosion, bombing, torpedo
+explode, luftwaffe, rocket
+nuclear, bomber, attack
+bomber, explosive, weapon
+blast, explosion, shell
+raid, raid, fire
+attack, injure, device
+disposal, blast, missile
+tank, damage, explosion
+atomic, tanker, car
+destroy, evacuate, strike
+aircraft, destroy, tank
+plane, airfield, explosive
+fighter, ira, grenade
+fly, grenade, earthquake
+luftwaffe, plane, bomber
+during, aircraft, storm
+allied, sink, aircraft
+explosive, allied, crash
+*********
+horse
+thoroughbred, thoroughbred, dog
+racing, jockey, motorcycle
+brigade, pony, bicycle
+regiment, racecourse, animal
+cavalry, mounted, car
+pony, breeder, bike
+artillery, ride, pony
+breed, rider, racing
+motorcycle, rid, bull
+harness, sire, volunteer
+race, racing, thoroughbred
+stable, stake, team
+ride, handicap, truck
+infantry, breed, goat
+rider, cavalry, woman
+camel, stud, cattle
+guard, camel, man
+bike, saddle, race
+cattle, riding, athlete
+jockey, mare, dragon
+*********
+fox
+nbc, nbc, abc
+abc, cbs, nbc
+cbs, abc, cbs
+news, espn, television
+affiliate, affiliation, bbc
+network, programming, network
+tv, cbc, espn
+television, newscast, tv
+cbc, affiliate, sport
+programming, broadcasting, channel
+broadcasting, channel, radio
+channel, broadcast, cbc
+radio, cnn, cable
+sport, television, news
+espn, pb, itv
+pb, daytime, smith
+cnn, network, shaw
+matthew, hbo, cnn
+anchor, news, cox
+drama, weekday, entertainment
+*********
+table
+tennis, heading, list
+periodic, html, column
+picnic, picnic, page
+below, volleyball, section
+file, skiing, template
+etc, header, category
+badminton, row, screen
+html, badminton, bottom
+summarize, excel, discussion
+database, infobox, room
+pdf, softball, diagram
+update, handball, infobox
+rotary, gymnastics, article
+swim, xml, bench
+ten, subscription, row
+altar, bottom, entry
+dinner, playground, image
+water, database, window
+following, mediawiki, box
+chess, bracket, magazine
+*********
+bowl
+super, batsman, super
+bowler, bowler, cup
+mvp, steelers, championship
+quiz, right-handed, league
+pro, mvp, tournament
+rose, wicket, game
+tournament, playoff, playoff
+all-american, inning, football
+lawn, consecutive, club
+consecutive, nfl, team
+golden, 49ers, trophy
+compass, redskin, season
+playoff, packer, final
+orange, afc, conference
+victory, super, match
+ball, berth, division
+bermuda, quarterback, nfl
+classic, bowling, wrestling
+cotton, all-time, baseball
+championship, cowboy, square
+*********
+guitar
+bass, bass, drum
+piano, percussion, bass
+drum, acoustic, piano
+keyboard, drum, keyboard
+vocal, vocal, vocal
+acoustic, keyboard, flute
+solo, saxophone, instrument
+violin, flute, violin
+instrument, piano, trumpet
+trumpet, guitarist, cello
+pedal, rhythm, saxophone
+playing, violin, organ
+saxophone, instrument, clarinet
+intro, bassist, string
+flute, backing, horn
+jazz, trumpet, solo
+rhythm, cello, music
+tenor, instrumentation, tenor
+electric, synthesizer, percussion
+string, clarinet, orchestra
+*********
+piano
+violin, violin, violin
+cello, cello, cello
+clarinet, clarinet, flute
+solo, flute, guitar
+sonata, concerto, clarinet
+flute, sonata, bass
+concerto, trumpet, viola
+op, viola, keyboard
+keyboard, percussion, horn
+string, saxophone, drum
+bass, op, organ
+trumpet, orchestra, percussion
+guitar, harp, orchestra
+saxophone, soloist, instrument
+viola, quartet, trumpet
+organ, ensemble, music
+horn, tenor, saxophone
+lesson, instrument, harp
+classical, bass, solo
+recital, soprano, choir
+*********
+
+
+car
+touring, racing, ('dealership'; 'compmod'; 'TO-ME')
+armoured, driver, ('parking'; 'compmod'; 'TO-ME')
+accident, lap, ('wash'; 'compmod'; 'TO-ME')
+armored, motor, ('accident'; 'compmod'; 'TO-ME')
+rental, accident, ('truck'; 'conj'; 'FROM-ME')
+luxury, truck, ('armoured'; 'amod'; 'FROM-ME')
+crash, formula, ('concept'; 'compmod'; 'FROM-ME')
+parking, crash, ('race'; 'dobj'; 'TO-ME')
+wash, ford, ('crash'; 'compmod'; 'TO-ME')
+racing, race, ('bomb'; 'compmod'; 'TO-ME')
+funny, drive, ('hit'; 'adpobj'; 'TO-ME'; 'adpmod'; 'by')
+cable, wheel, ('armored'; 'amod'; 'FROM-ME')
+sprint, passenger, ('ferry'; 'compmod'; 'TO-ME')
+freight, vehicle, ('race'; 'amod'; 'FROM-ME')
+dealer, stock, ('drive'; 'dobj'; 'TO-ME')
+stock, engine, ('formula'; 'compmod'; 'FROM-ME')
+motor, sport, ('drive'; 'partmod'; 'FROM-ME')
+ferry, speed, ('racing'; 'compmod'; 'TO-ME')
+race, championship, ('luxury'; 'compmod'; 'FROM-ME')
+driver, front, ('cable'; 'compmod'; 'FROM-ME')
+*********
+bus
+interchange, transit, ('tram'; 'conj'; 'TO-ME')
+rout, interchange, ('Éireann'; 'compmod'; 'TO-ME')
+shuttle, terminal, ('subway'; 'conj'; 'TO-ME')
+terminal, taxi, ('stop'; 'compmod'; 'TO-ME')
+depot, depot, ('rout'; 'nsubj'; 'TO-ME')
+route, route, ('serial'; 'compmod'; 'FROM-ME')
+commuter, metro, ('terminus'; 'compmod'; 'TO-ME')
+operator, transport, ('route'; 'nsubj'; 'TO-ME')
+transit, terminus, ('interchange'; 'compmod'; 'TO-ME')
+shelter, passenger, ('accessible'; 'adpobj'; 'TO-ME'; 'adpmod'; 'by')
+stop, truck, ('rail'; 'conj'; 'FROM-ME')
+service, operator, ('shelter'; 'compmod'; 'TO-ME')
+serial, stop, ('route'; 'compmod'; 'TO-ME')
+hybrid, transportation, ('terminal'; 'compmod'; 'TO-ME')
+parking, service, ('rail'; 'conj'; 'TO-ME')
+rapid, operate, ('stand'; 'compmod'; 'TO-ME')
+terminus, connect, ('passenger'; 'compmod'; 'TO-ME')
+station, rail, ('depot'; 'compmod'; 'TO-ME')
+motor, station, ('transit'; 'compmod'; 'TO-ME')
+driver, airport, ('board'; 'dobj'; 'TO-ME')
+*********
+hospital
+psychiatric, psychiatric, ('doctor'; 'adpobj'; 'TO-ME'; 'adpmod'; 'at')
+bed, clinic, ('rush'; 'adpobj'; 'TO-ME'; 'adpmod'; 'to')
+hopkins, bed, ('teaching'; 'amod'; 'FROM-ME')
+nh, medical, ('psychiatric'; 'amod'; 'FROM-ME')
+mercy, surgery, ('bed'; 'compmod'; 'TO-ME')
+teaching, patient, ('stay'; 'compmod'; 'TO-ME')
+acute, bombay, ('hopkins'; 'compmod'; 'FROM-ME')
+mental, care, ('teaching'; 'compmod'; 'FROM-ME')
+memorial, teaching, ('rush'; 'adpobj'; 'TO-ME')
+presbyterian, cancer, ('transport'; 'adpobj'; 'TO-ME'; 'adpmod'; 'to')
+admission, health, ('take'; 'adpobj'; 'TO-ME'; 'adpmod'; 'to')
+rush, medicine, ('patient'; 'adpobj'; 'TO-ME')
+general, emergency, ('memorial'; 'compmod'; 'FROM-ME')
+christ, doctor, ('admit'; 'adpobj'; 'TO-ME'; 'adpmod'; 'to')
+recover, dr, ('die'; 'adpobj'; 'TO-ME'; 'adpmod'; 'at')
+charity, memorial, ('eye'; 'compmod'; 'FROM-ME')
+massachusetts, facility, ('general'; 'compmod'; 'FROM-ME')
+veteran, trust, ('visit'; 'adpobj'; 'TO-ME'; 'adpmod'; 'in')
+naval, treatment, ('doctor'; 'adpobj'; 'TO-ME')
+nearby, tamil, ('massachusetts'; 'compmod'; 'FROM-ME')
+*********
+hotel
+hilton, resort, ('casino'; 'conj'; 'FROM-ME')
+luxury, luxury, ('lobby'; 'compmod'; 'TO-ME')
+savoy, casino, ('hilton'; 'compmod'; 'FROM-ME')
+plaza, plaza, ('plaza'; 'compmod'; 'FROM-ME')
+dining, restaurant, ('resort'; 'conj'; 'FROM-ME')
+lobby, inn, ('savoy'; 'compmod'; 'FROM-ME')
+paramount, room, ('neutral'; 'compmod'; 'FROM-ME')
+casino, tourist, ('luxury'; 'compmod'; 'FROM-ME')
+room, chain, ('restaurant'; 'conj'; 'FROM-ME')
+riverside, guest, ('resort'; 'compmod'; 'FROM-ME')
+chain, shop, ('stay'; 'adpobj'; 'TO-ME'; 'adpmod'; 'at')
+windsor, palace, ('palace'; 'compmod'; 'FROM-ME')
+resort, purchase, ('room'; 'compmod'; 'TO-ME')
+grand, stay, ('convert'; 'adpobj'; 'TO-ME'; 'adpmod'; 'into')
+palace, tower, ('milk'; 'compmod'; 'FROM-ME')
+expensive, owner, ('chain'; 'compmod'; 'TO-ME')
+midland, bar, ('restaurant'; 'adpobj'; 'TO-ME')
+milk, grand, ('chain'; 'adpobj'; 'TO-ME'; 'adpmod'; 'of')
+ace, historic, ('shop'; 'conj'; 'TO-ME')
+nearby, spring, ('purchase'; 'dobj'; 'TO-ME')
+*********
+gun
+anti-aircraft, anti-aircraft, ('navarone'; 'adpobj'; 'FROM-ME')
+machine, turret, ('anti-aircraft'; 'compmod'; 'FROM-ME')
+mm, armament, ('emplacement'; 'compmod'; 'TO-ME')
+mounted, machine, ('rifle'; 'amod'; 'FROM-ME')
+barrel, ammunition, ('machine'; 'compmod'; 'FROM-ME')
+mk, barrel, ('battery'; 'adpobj'; 'TO-ME'; 'adpmod'; 'of')
+deck, rifle, ('barrel'; 'compmod'; 'TO-ME')
+turret, battery, ('arm'; 'adpobj'; 'TO-ME'; 'adpmod'; 'with')
+bunker, artillery, ('aim'; 'dobj'; 'TO-ME')
+n, deck, ('deck'; 'compmod'; 'FROM-ME')
+armstrong, fire, ('mounted'; 'amod'; 'FROM-ME')
+heavy, mount, ('ammunition'; 'conj'; 'FROM-ME')
+artillery, weapon, ('man'; 'dobj'; 'TO-ME')
+rifle, tank, ('mm'; 'compmod'; 'FROM-ME')
+shield, shot, ('mortar'; 'conj'; 'FROM-ME')
+jam, assault, ('rifle'; 'conj'; 'TO-ME')
+lewis, rose, ('shoot'; 'adpobj'; 'TO-ME'; 'adpmod'; 'with')
+nest, heavy, ('mount'; 'nsubjpass'; 'TO-ME')
+battery, shoot, ('jump'; 'dobj'; 'TO-ME')
+jump, arm, ('battery'; 'adpobj'; 'TO-ME')
+*********
+bomb
+atomic, explode, ('aimer'; 'compmod'; 'TO-ME')
+explode, luftwaffe, ('detonate'; 'nsubjpass'; 'TO-ME')
+disposal, atomic, ('detonate'; 'dobj'; 'TO-ME')
+petrol, ira, ('pipe'; 'amod'; 'FROM-ME')
+hydrogen, bombing, ('explode'; 'nsubj'; 'TO-ME')
+parcel, explosion, ('luftwaffe'; 'nsubj'; 'FROM-ME')
+luftwaffe, explosive, ('explodes'; 'compmod'; 'TO-ME')
+ira, injure, ('defuse'; 'dobj'; 'TO-ME')
+blast, bomber, ('explode'; 'compmod'; 'TO-ME')
+explosion, hydrogen, ('aircraft'; 'adpobj'; 'FROM-ME'; 'adpmod'; 'by')
+raid, raid, ('disposal'; 'compmod'; 'TO-ME')
+premature, nuclear, ('blast'; 'compmod'; 'TO-ME')
+neutron, drop, ('plant'; 'partmod'; 'FROM-ME')
+pipe, sink, ('explosion'; 'compmod'; 'TO-ME')
+bounce, target, ('raid'; 'dobj'; 'FROM-ME')
+suicide, aircraft, ('atomic'; 'amod'; 'FROM-ME')
+explosive, kill, ('hydrogen'; 'compmod'; 'FROM-ME')
+nuclear, damage, ('cluster'; 'compmod'; 'FROM-ME')
+conventional, plane, ('wave'; 'adpobj'; 'FROM-ME'; 'adpmod'; 'in')
+nato, destroy, ('plant'; 'dobj'; 'TO-ME')
+*********
+horse
+thoroughbred, thoroughbred, ('pony'; 'conj'; 'FROM-ME')
+trojan, mounted, ('mule'; 'conj'; 'FROM-ME')
+harness, jockey, ('harness'; 'compmod'; 'FROM-ME')
+rid, rid, ('trojan'; 'compmod'; 'FROM-ME')
+crazy, trailer, ('ride'; 'dobj'; 'TO-ME')
+racing, rider, ('wagon'; 'conj'; 'FROM-ME')
+riding, riding, ('crazy'; 'compmod'; 'FROM-ME')
+drawn, racing, ('rider'; 'conj'; 'FROM-ME')
+arabian, breed, ('thoroughbred'; 'compmod'; 'FROM-ME')
+cattle, cattle, ('rid'; 'dobj'; 'TO-ME')
+ride, bombay, ('bull'; 'conj'; 'TO-ME')
+artillery, ride, ('riding'; 'compmod'; 'TO-ME')
+wild, stake, ('racing'; 'compmod'; 'TO-ME')
+breed, cavalry, ('rid'; 'partmod'; 'FROM-ME')
+race, regiment, ('race'; 'partmod'; 'FROM-ME')
+rider, artillery, ('troop'; 'adpobj'; 'TO-ME'; 'adpmod'; 'of')
+brigade, brigade, ('man'; 'adpobj'; 'TO-ME'; 'adpmod'; 'on')
+dark, race, ('fall'; 'adpobj'; 'TO-ME'; 'adpmod'; 'from')
+trainer, wild, ('age'; 'partmod'; 'FROM-ME')
+shoe, trail, ('race'; 'adpobj'; 'TO-ME'; 'adpmod'; 'for')
+*********
+fox
+sac, hound, ('sauk'; 'conj'; 'TO-ME')
+20th, affiliation, ('hound'; 'conj'; 'FROM-ME')
+hunting, cbs, ('searchlight'; 'compmod'; 'TO-ME')
+news, nbc, ('footy'; 'compmod'; 'TO-ME')
+twentieth, abc, ('mulder'; 'compmod'; 'TO-ME')
+affiliate, affiliate, ('hare'; 'conj'; 'TO-ME')
+sport, sport, ('abc'; 'conj'; 'TO-ME')
+reservation, news, ('terrier'; 'compmod'; 'TO-ME')
+matthew, programming, ('hunting'; 'compmod'; 'TO-ME')
+64, channel, ('televise'; 'adpobj'; 'TO-ME'; 'adpmod'; 'on')
+kid, 20th, ('ohio'; 'compmod'; 'TO-ME')
+gray, network, ('cat'; 'conj'; 'FROM-ME')
+broadcasting, kid, ('net'; 'compmod'; 'TO-ME')
+programming, soccer, ('twentieth'; 'compmod'; 'FROM-ME')
+abc, switch, ('kit'; 'compmod'; 'FROM-ME')
+network, entertainment, ('televise'; 'adpobj'; 'TO-ME')
+kit, morning, ('affiliation'; 'compmod'; 'TO-ME')
+nbc, broadcast, ('gray'; 'amod'; 'FROM-ME')
+soccer, television, ('news'; 'compmod'; 'TO-ME')
+century, tv, ('affiliate'; 'compmod'; 'TO-ME')
+*********
+table
+picnic, picnic, ('list'; 'adpobj'; 'FROM-ME'; 'adpmod'; 'below')
+periodic, tennis, ('carpianum'; 'conj'; 'TO-ME')
+tennis, gospel, ('periodic'; 'compmod'; 'FROM-ME')
+badminton, row, ('following'; 'compmod'; 'FROM-ME')
+rotary, column, ('tennis'; 'compmod'; 'TO-ME')
+html, database, ('picnic'; 'amod'; 'FROM-ME')
+following, following, ('picnic'; 'compmod'; 'FROM-ME')
+coffee, content, ('content'; 'adpobj'; 'FROM-ME'; 'adpmod'; 'of')
+canon, template, ('salt'; 'compmod'; 'TO-ME')
+summarize, medal, ('medal'; 'compmod'; 'FROM-ME')
+breakfast, format, ('column'; 'adpobj'; 'TO-ME'; 'adpmod'; 'of')
+altar, finish, ('periodic'; 'amod'; 'FROM-ME')
+operating, element, ('truth'; 'compmod'; 'FROM-ME')
+salt, list, ('content'; 'adpobj'; 'FROM-ME')
+database, contain, ('sit'; 'adpobj'; 'TO-ME'; 'adpmod'; 'at')
+dinner, entry, ('canon'; 'compmod'; 'FROM-ME')
+mathematical, key, ('row'; 'adpobj'; 'TO-ME'; 'adpmod'; 'of')
+pool, code, ('row'; 'adpobj'; 'TO-ME')
+medal, water, ('knight'; 'adpobj'; 'TO-ME'; 'adpmod'; 'of')
+setting, text, ('column'; 'adpobj'; 'TO-ME')
+*********
+bowl
+super, right-handed, ('batsman'; 'rcmod'; 'TO-ME')
+batsman, super, ('xliv'; 'compmod'; 'TO-ME')
+quiz, quiz, ('xlii'; 'compmod'; 'TO-ME')
+pro, steelers, ('xxxiv'; 'compmod'; 'TO-ME')
+rose, batsman, ('xliii'; 'compmod'; 'TO-ME')
+alley, bowler, ('xxxvi'; 'compmod'; 'TO-ME')
+sugar, rose, ('alley'; 'amod'; 'TO-ME')
+lawn, wicket, ('xl'; 'compmod'; 'TO-ME')
+bermuda, pro, ('select'; 'adpobj'; 'TO-ME'; 'adpmod'; 'to')
+subdivision, sugar, ('pace'; 'dobj'; 'FROM-ME')
+cotton, pace, ('rose'; 'compmod'; 'FROM-ME')
+orange, nfl, ('bermuda'; 'compmod'; 'FROM-ME')
+mvp, orange, ('quiz'; 'compmod'; 'FROM-ME')
+dust, cotton, ('pro'; 'compmod'; 'FROM-ME')
+compass, inning, ('sugar'; 'compmod'; 'FROM-ME')
+barrow, touchdown, ('subdivision'; 'compmod'; 'TO-ME')
+bowler, consecutive, ('invitation'; 'adpobj'; 'TO-ME'; 'adpmod'; 'to')
+xiii, ball, ('super'; 'compmod'; 'FROM-ME')
+all-american, yard, ('ball'; 'rcmod'; 'TO-ME')
+toilet, stadium, ('orange'; 'compmod'; 'FROM-ME')
+*********
+guitar
+acoustic, bass, ('vocal'; 'appos'; 'TO-ME')
+bass, percussion, ('vocal'; 'appos'; 'FROM-ME')
+rhythm, acoustic, ('banjo'; 'conj'; 'TO-ME')
+electric, vocal, ('amplifier'; 'conj'; 'FROM-ME')
+amplifier, keyboard, ('riff'; 'compmod'; 'TO-ME')
+vintage, drum, ('vocal'; 'conj'; 'FROM-ME')
+pedal, amplifier, ('vocal'; 'conj'; 'TO-ME')
+gibson, saxophone, ('keyboard'; 'conj'; 'FROM-ME')
+solo, line-up, ('bass'; 'conj'; 'FROM-ME')
+tenor, rhythm, ('bass'; 'appos'; 'FROM-ME')
+playing, backing, ('bass'; 'compmod'; 'FROM-ME')
+distortion, electric, ('percussion'; 'conj'; 'FROM-ME')
+intro, gibson, ('rhythm'; 'compmod'; 'FROM-ME')
+vocal, piano, ('solo'; 'compmod'; 'TO-ME')
+chord, violin, ('acoustic'; 'amod'; 'FROM-ME')
+hero, guitarist, ('drum'; 'conj'; 'FROM-ME')
+rag, string, ('intro'; 'compmod'; 'TO-ME')
+flute, solo, ('consist'; 'adpobj'; 'TO-ME'; 'adpmod'; 'on')
+concerto, instrument, ('saxophone'; 'conj'; 'FROM-ME')
+signature, melody, ('trumpet'; 'conj'; 'FROM-ME')
+*********
+piano
+concerto, cello, ('accordion'; 'compmod'; 'TO-ME')
+viola, sonata, ('accompaniment'; 'compmod'; 'TO-ME')
+cello, op, ('viola'; 'conj'; 'TO-ME')
+sonata, viola, ('concertino'; 'adpobj'; 'TO-ME'; 'adpmod'; 'for')
+violin, concerto, ('concertino'; 'adpobj'; 'TO-ME')
+recital, violin, ('trio'; 'adpobj'; 'TO-ME'; 'adpmod'; 'for')
+clarinet, clarinet, ('harpsichord'; 'conj'; 'TO-ME')
+lesson, opus, ('cello'; 'conj'; 'TO-ME')
+solo, saxophone, ('concerto'; 'compmod'; 'TO-ME')
+opus, trumpet, ('violin'; 'conj'; 'TO-ME')
+trio, pianist, ('virtuoso'; 'compmod'; 'TO-ME')
+prepared, flute, ('op'; 'conj'; 'FROM-ME')
+beethoven, lesson, ('sonata'; 'compmod'; 'TO-ME')
+trumpet, trio, ('recital'; 'compmod'; 'TO-ME')
+quartet, keyboard, ('harp'; 'conj'; 'TO-ME')
+acoustic, guitar, ('sonata'; 'adpobj'; 'TO-ME'; 'adpmod'; 'for')
+atop, solo, ('concerto'; 'adpobj'; 'TO-ME'; 'adpmod'; 'for')
+saxophone, orchestra, ('clarinet'; 'conj'; 'TO-ME')
+duet, organ, ('violin'; 'conj'; 'FROM-ME')
+suite, drum, ('quintet'; 'compmod'; 'TO-ME')
+*********
+
+
+the 1003505
+, 836386
+. 771257
+be 530845
+of 478996
+a 429702
+and 415569
+in 390144
+to 323991
+for 126502
+on 117509
+it 115336
+have 111360
+( 110634
+) 110428
+that 103107
+with 101028
+by 100237
+he 85414
+'s 75870
+at 73633
+from 72765
+his 69131
+an 61408
+this 59912
+i 52007
+`` 50852
+'' 48395
+not 46798
+which 44824
+or 40646
+but 37259
+also 36540
+one 33600
+use 30915
+first 30217
+their 29470
+they 28945
+do 28690
+who 28087
+new 27345
+after 26817
+there 24607
+year 23853
+state 23845
+make 23759
+her 23756
+article 23548
+other 23488
+time 23235
+
+
+('new', 'compmod', 'FROM-ME') 12836
+('new', 'amod', 'FROM-ME') 12064
+('make', 'dobj', 'TO-ME') 11396
+('take', 'dobj', 'TO-ME') 11215
+('use', 'adpobj', 'TO-ME') 10958
+('year', 'adpobj', 'FROM-ME') 10603
+('united', 'compmod', 'FROM-ME') 10262
+('time', 'adpobj', 'FROM-ME') 10182
+('become', 'attr', 'TO-ME') 9767
+('school', 'compmod', 'TO-ME') 9423
+('later', 'advmod', 'FROM-ME') 9194
+('part', 'adpobj', 'TO-ME') 9124
+('use', 'dobj', 'TO-ME') 8990
+('include', 'adpobj', 'TO-ME') 8782
+('part', 'adpobj', 'TO-ME', 'adpmod', 'of') 8209
+('state', 'compmod', 'FROM-ME') 7922
+('become', 'adpobj', 'TO-ME') 7921
+('make', 'adpobj', 'TO-ME') 7882
+('include', 'adpmod', 'FROM-ME') 7623
+('article', 'adpobj', 'FROM-ME') 7516
+('take', 'adpobj', 'TO-ME') 7303
+('state', 'compmod', 'TO-ME') 7225
+('large', 'amod', 'FROM-ME') 7195
+('world', 'compmod', 'FROM-ME') 7189
+('march', 'num', 'TO-ME') 7154
+('state', 'adpobj', 'FROM-ME') 7107
+('begin', 'adpobj', 'TO-ME') 7092
+('june', 'num', 'TO-ME') 7076
+('april', 'num', 'TO-ME') 7028
+('member', 'adpobj', 'TO-ME') 7002
+('july', 'num', 'TO-ME') 6992
+('give', 'dobj', 'TO-ME') 6928
+('october', 'num', 'TO-ME') 6919
+('include', 'dobj', 'TO-ME') 6915
+('national', 'compmod', 'FROM-ME') 6836
+('win', 'dobj', 'TO-ME') 6803
+('work', 'adpobj', 'TO-ME') 6792
+('play', 'adpobj', 'TO-ME') 6749
+('september', 'num', 'TO-ME') 6668
+('high', 'amod', 'FROM-ME') 6662
+('early', 'amod', 'FROM-ME') 6534
+('august', 'num', 'TO-ME') 6397
+('number', 'adpobj', 'TO-ME') 6341
+('january', 'num', 'TO-ME') 6308
+('serve', 'adpobj', 'TO-ME') 6278
+('release', 'adpobj', 'TO-ME') 6245
+('november', 'num', 'TO-ME') 6170
+("'", 'adp', 'FROM-ME') 6042
+('february', 'num', 'TO-ME') 6015
+('team', 'compmod', 'TO-ME') 5875
+
+num of words above 75 count: 10057
+
+
+defaultdict(<class 'float'>, {'words count': 112.15499949455261, 'dependency': 107.38917016983032, 'windows': 110.87891101837158, 'tuple code': 15.639772415161133, 'words code': 194.0905077457428, 'windows code': 23.747243881225586})
+
+Process finished with exit code 0

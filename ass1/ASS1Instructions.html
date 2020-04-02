@@ -1,0 +1,313 @@
+<p><link href="../swiss.css" rel=stylesheet></link></p>
+
+<p><a href="../index.html">nlp 2019 course</a></p>
+
+<h1>Assignment 1: Sequence Tagging</h1>
+
+<p>In this assignment you will implement a sequence tagger using the Viterbi algorithm.</p>
+
+<p>You will implement 2 versions of the tagger:</p>
+
+<ol>
+<li><p>An HMM tagger.</p></li>
+<li><p>A MEMM tagger.</p></li>
+</ol>
+
+<p>You will evaluate your taggers on two datatsets.</p>
+
+<p>In addition to the code, you should also submit a short writeup, see below.</p>
+
+<p>At the time of the assignment is published, we did not cover the material for
+all of the parts, so the submission date is somewhat far into the future. But you can definitely start now, and advised to do so: things take time.</p>
+
+<h1>Software</h1>
+
+<p>Use Python 3 for this exercise.</p>
+
+<h1>Personal Details</h1>
+
+<p>include inside the submission a text file named <code>details.txt</code>, with your details. The format of this file is: <code>first-name SPACE family-name SPACE id</code>. If you submit in pairs, write the details of both of you, each one in a separate line. For example:</p>
+
+<p><code>Shira Cohen 12345678</code></p>
+
+<p><code>Or Levi 87654321</code></p>
+
+<p>Without the details files, we cannot grade your assignment.</p>
+
+<h1>Data</h1>
+
+<p>The training and test files (tagged corpora) needed for this assignment are available on <a href="https://piazza.com/biu.ac.il/fall2019/89680/resources">piazza</a></p>
+
+<p>We will be using two datasets: one for part-of-speech tagging, based on newswire text, and the other for named-entity recognition based on Twitter data.</p>
+
+<p>The instructions below assume the part-of-speech tagging data, which is the main task. However, as sequence tagging is a generic task, you will also train and test your taggers on the named entities data.</p>
+
+<h2>HMM Tagger</h2>
+
+<p>When implementing the HMM tagger, there are two tasks: (a) computing the MLE estimates q (transition probabilities) and e (emission probabilities), (b) finding the best sequence based on these quantities using the Viterbi algorithm.</p>
+
+<h3>HMM task 1: MLE estimates (20 pts)</h3>
+
+<p>In this part you need to compute the estimates for e and q quantities based on the training data. In class 3, we refer to the quantities <code>q</code> as <strong>transition probabilities</strong> and the quantities <code>e</code> as <strong>emission probabilities</strong>.</p>
+
+<p>The input of this part is a tagged corpus.  The output is two files: <code>e.mle</code> will contain the info needed for computing the estimates of e, and <code>q.mle</code> will contain the info needed for computing the estimates of q. The files will be in a human-readable format.</p>
+
+<p>As discussed in class, the estimates for q should be based on a weighted linear interpolation of p(c|a,b), p(c|b) and p(c) (see slide 120 in class 3).</p>
+
+<p>The estimates for <code>e</code> should be such that they work for words seen in training, as well as words not seen in training.
+That is, you are advised to think about good "word signatures" for use with unknown words that may appear at test time.</p>
+
+<p>The format of <code>e.mle</code> and <code>q.mle</code> files should be the following:
+Each line represents an event and a count, separated by a tab.
+For example, lines in <code>e.mle</code> could be:</p>
+
+<p><code>dog NN&lt;TAB&gt;345</code></br>
+<code>*UNK* NN&lt;TAB&gt;939</code></p>
+
+<p>While lines in <code>q.mle</code> could be:</p>
+
+<p><code>DT JJ NN&lt;TAB&gt;3232</code></br>
+<code>DT JJ&lt;TAB&gt;3333</code></p>
+
+<p>(the numbers here are made up. <code>&lt;TAB&gt;</code> represents a TAB character, i.e. <code>"\t"</code>)</p>
+
+<p>Word-signature events in <code>e.mle</code> should start with a <code>^</code> sign, for example:</p>
+
+<p><code>^Aa NN&lt;TAB&gt;354</code></br></p>
+
+<p>This indicates a signature for a word starting with upper-case letter and continuting with lowercase.
+Beyond starting with <code>^</code>, you are free to use whatever format you choose for the word signatures.
+Lines for actual words should not start with <code>^</code>.</p>
+
+<p>Beyond saving the corpus-based quantities in <code>q.mle</code> and <code>e.mle</code> you code should also contain methods for computing the actual q and e quantities.
+For example, a method called <code>getQ(t1,t2,t3)</code> (or another name) will be used to compute the quantity <code>q(t3|t1,t2)</code> based on the different counts in the <code>q.mle</code> file.
+You will use them in the next sections when implementing the actual tagging algorithm.</p>
+
+<p><b>What to submit:</b></p>
+
+<p>A program called <code>MLETrain</code> taking 3 commandline parameters, <code>input_file_name</code>, <code>q.mle</code>, <code>e.mle</code></p>
+
+<p>The program will go over the training data in <code>input_file_name</code>, compute the needed quantities, and write them to the filenames supplied for <code>q.mle</code> and <code>e.mle</code>.</p>
+
+<p>Your program should be run as:</p>
+
+<p><code>
+python3 MLETrain.py input_file_name q.mle e.mle
+</code></p>
+
+<p>Note: If this part takes more than a few seconds to run, you are doing something very wrong.</p>
+
+<h3>HMM task 2: Greedy decoding (5 pts)</h3>
+
+<p>Implement a greedy tagger. You will assign scores for each position based on the q and e quantities, using the greedy algorithm presented in class.</p>
+
+<p>See "what to submit" instruction in task 3 below.</p>
+
+<h3>HMM task 3: Viterbi decoding (20 pts)</h3>
+
+<p>Implement the Viterbi algorithm.  In this part, your Viterbi algorithm will use scores based on the e and q quantities from the previous task, but it is advisable (though not required) to write it in a way that will make it easy to re-use the Vietrbi code in the MEMM part, by switching to the scores derived form a log-linear model (that is, the Viterbi code could use a <code>getScore(word,tag,prev_tag,prev_prev_tag)</code> function that can be implemented in different ways, one of them is based on <code>q</code> and <code>e</code>).</p>
+
+<p>You need to implement the Viterbi algorithm for Trigram tagging.
+The straight-forward version of the algorithm can be a bit slow, it is better if you add some pruning to not allow some tags at some positions, by restricting the tags certain words can take, or by considering impossible tag sequences. This is necessary for a reasonable running time. <strong><em>If your code runs for more than 4 minutes, it will not be graded (i.e., will receive a 0 score).</em></strong> </p>
+
+<p><b>What to submit:</b></p>
+
+<p>Two text files named <code>hmm-viterbi-predictions.txt</code> and <code>hmm-greedy-predictions.txt</code> with your predictions on the development file <code>ass1-tagger-dev</code>.</p>
+
+<p>A program called <code>GreedyTag</code> (implementing greedy tagging) taking 5 commandline parameters, <code>input_file_name</code>, <code>q.mle</code>, <code>e.mle</code>, <code>greedy_hmm_output.txt</code>, <code>extra_file.txt</code>.</p>
+
+<p>A program called <code>HMMTag</code> (implementing viterbi tagging) taking 5 commandline parameters, <code>input_file_name</code>, <code>q.mle</code>, <code>e.mle</code>, <code>viterbi_hmm_output.txt</code>, <code>extra_file.txt</code>.</p>
+
+<p><code>q.mle</code> and <code>e.mle</code> are the names of the files produced by your MLETrain from above.
+<code>input_file_name</code> is the name of an input file. The input is one sentence per line, and the tokens are separated by whitepsace.
+The format of <code>viterbi_hmm_output.txt</code> and <code>greedy_hmm_output.txt</code> should be the same as the input file for <code>MLETrain</code>.
+<code>extra_file.txt</code> this is a name of a file which you are free to use to read stuff from, or to ignore. Even if you do not use an extra file, you should still accept it as an argument.</p>
+
+<p>The purpose of the <code>extra_file.txt</code> is to allow for extra information, if you need them for the pruning of the tags, or for setting the lambda values for the interpolation. If you use the extra_file in your code, you need to submit it also together with your code.</p>
+
+<p>The program will tag each sentence in the <code>input_file_name</code> using the tagging algorithm and the MLE estimates, and output the result to <code>out_file_name</code>.</p>
+
+<p>Your program should run as follows:</p>
+
+<p><code>python3 GreedyTag.py input_file_name q.mle e.mle greedy_hmm_output.txt extra_file.txt</code></p>
+
+<p><code>python3 HMMTag.py input_file_name q.mle e.mle viterbi_hmm_output.txt extra_file.txt</code></p>
+
+<p><b> Your tagger should achieve a dev-set accuracy of at leat 95\% on the provided POS-tagging dataset. </b></p>
+
+<p><br/>
+<br/>
+<b> We should be able to train and test your tagger on new files which we provide. We may use a different tagset.</b></p>
+
+<h2>MEMM Tagger</h2>
+
+<p>Like the HMM tagger, the MEMM tagger also has two parts: training and prediction.</p>
+
+<p>Like in the HMM, we will put these in different programs. For the prediction program, you
+can likely re-use large parts of the code you used for the HMM tagger.</p>
+
+<h3>MEMM task 1: Model Training (20 pts)</h3>
+
+<p>In this part you will write code that will extract training data from the the training corpus in a format that a log-linear trainer can understand, and then train a model.</p>
+
+<p>This will be a three-stage process.</p>
+
+<ol>
+<li><p>Feature Extraction: Read in the train corpus, and produce a file of feature vectors, where each line looks like: </p>
+
+<p><code>label feat1 feat2 ... featn</code> </p>
+
+<p>where all the items are stings. For example, if the features are the word form, the 3-letter suffix, and the previous tag, you could have lines such as </p>
+
+<p><code>NN form=walking suff=ing pt=DT</code>,</p>
+
+<p>indicating a case where the gold label is <code>NN</code>, the word is <code>walking</code>, its suffix is <code>ing</code> and the previous tag is <code>DT</code>.</p></li>
+<li><p>Feature Conversion and training: Read in the features file produced in stage (1), produce a file in the format the log-linear trainer can read, and train the model, to produce a trained model file. The classification model we will use goes by various names, including <code>multinomial logistic regression</code>, <code>multiclass logistic regression</code>, <code>maximum entropy</code>, <code>maxent</code>.</p></li>
+</ol>
+
+<p>For feature conversion and model training, we will use <a href="http://scikit-learn.org/stable/">scikit-learn</a> python package (also called <code>sklearn</code>). The sklearn package contains many machine learning algorithms, and is worth knowing. To convert the features you extracted to a format than can be fed to the model, use sklearn <a href="https://scikit-learn.org/stable/modules/feature_extraction.html">DictVectorizer</a>. Alternatively, you can convert the features file using <a href="https://scikit-learn.org/stable/datasets/index.html#datasets-in-svmlight-libsvm-format">load<em>svmlight</em>file()</a>. Then, train a <a href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html">logisitc regression model</a> (make sure to use the softmax classifier, and not the "one vs. rest" classifer). </p>
+
+<p>To be precise, you need create and submit the following programs, that run as follows:</p>
+
+<ol>
+<li><code>python3 ExtractFeatures.py corpus_file features_file</code></li>
+<li><code>python3 TrainSolver.py features_file model_file</code></li>
+</ol>
+
+<p>You can save the mapping you create between features and integers to a file named <code>feature_map_file</code> (to be use in test time).</p>
+
+<p>The first parameter to each program is the name of an input file, and the rest are names of output files. <code>model_file</code> is your trained model (<strong><em>Do not submit it</em></strong>)</p>
+
+<p><strong>Implement the features from table 1 in the MEMM paper (see link in the course website)</strong></p>
+
+<p><b>What to submit:</b></p>
+
+<p>Submit the code for the programs in stages (1) and (2).
+You also need to submit a file named <code>features_file_partial</code>. This file contains the first 100 and last 100 lines in the <code>features_file</code>.</p>
+
+<p>You can create the partial file on a unix commandline using:</p>
+
+<p><code>cat features_file | head -100 &gt; features_file_partial</code></p>
+
+<p><code>cat features_file | tail -100 &gt;&gt; features_file_partial</code></p>
+
+<p>You can verify the number of lines using:</p>
+
+<p><code>cat features_file_partial | wc -l</code></p>
+
+<p>(the result should be <code>200</code>)</p>
+
+<h3>MEMM task 2: Greedy decoding (5 pts)</h3>
+
+<p>Implement a greedy tagger. You will assign scores for each position based on the max-ent model, in a greedy fashion.</p>
+
+<p>See "what to submit" instruction in task 3 below.</p>
+
+<h3>MEMM task 3: Viterbi Tagger (15 pts)</h3>
+
+<p>Use the model you trained in the previous task inside your vieterbi decoder.</p>
+
+<p><b>What to submit:</b></p>
+
+<p>Two text files named <code>memm-viterbi-predictions.txt</code> and <code>memm-greedy-predictions.txt</code> with your predictions on the test file <code>ass1-tagger-test-input</code>.</p>
+
+<p>A program called <code>GreedyMaxEntTag</code> taking 4 commadnline parameters, <code>input_file_name</code>, <code>modelname</code>, <code>feature_map_file</code>, <code>out_file_name</code>.</p>
+
+<p>A program called <code>MEMMTag</code> taking 4 commadnline parameters, <code>input_file_name</code>, <code>modelname</code>, <code>feature_map_file</code>, <code>out_file_name</code>.</p>
+
+<ul>
+<li><code>input_file_name</code> is the name of an input file. The input is one sentence per line, and the tokens are separated by whitepsace.</li>
+<li><code>modelname</code> is the names of the MaxEnt trained model file.</li>
+<li><code>feature_map_file</code> is the name of the features-to-integers file, which can also contain other information if you need it to.</li>
+<li><code>out_file_name</code> is the name of the output file.  The format here should be the same as the input file for <code>MLETrain</code>.</li>
+</ul>
+
+<p>The purpose of the <code>feature_map_file</code> is to contain the string-to-id mapping, as well as other information which you may need, for example for pruning of the possible tags, like you did in the HMM part.</p>
+
+<p>The programs will tag each sentence in the <code>input_file_name</code> using using either the MaxEnt (logistic-regression) predictions and greedy-decoding, or using the MaxEnt predictions and Viterbi decoding, and output the result to <code>out_file_name</code>.</p>
+
+<p>Note: If memory usage is an issue, you can (1) use a sparse representation in DictVectorizer, and (2) use <a href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.SGDClassifier.html">SGDClassifier</a> with loss='log', instead of <code>linear_model.LogisticRegressio</code>. This model has a methdo <code>partial_fit()</code> that can be run on a subset of the dataset. <strong><em>If the program runs for more than 10 minutes, it will not be graded.</em></strong></p>
+
+<p>Your program should be run as:</p>
+
+<p><code>
+python3 GreedyMaxEntTag.py input_file_name model_file_name feature_map_file output_file
+</code></p>
+
+<p><code>
+python3 MEMMTag.py input_file_name model_file_name feature_map_file output_file
+</code></p>
+
+<p><b> Your tagger should achieve a dev-set accuracy of at leat 95\% on the provided POS-tagging dataset. </b></p>
+
+<p><strong>Clarification</strong>:
+In class (and in the MEMM paper) the features are written as <code>form=dog&amp;label=NN</code>, and we assume a feature for each label, that is, we will also have <code>form=dog&amp;label=DT</code>, <code>form=dog&amp;label=VB</code> etc. That is, the label is part of the feature. In the solvers input, we take a somewhat different approach, and do not include the label as part of the feature. Instead, we write the correct label, and all the label-less features. The solver produces the conjunctions with all the different labels internally.
+Over the years, this is something that was very hard for some students to grasp. I made this
+<a href="http://www.cs.biu.ac.il/~89-680/weights.pdf">illustration</a> which I hope will help to explain this. </p>
+
+<h1>The Named Entities Data (15 pts)</h1>
+
+<p>Train and test your taggers also on the <a href="ner.tgz">named entities data</a>.</p>
+
+<p>Note that there are two ways to evaluate the named entities data. One of them is to look at the per-token accuracy, like in POS tagging
+(what is your per-token accuracy?).</p>
+
+<p>The NER results are lower than the POS results (how much lower?), look at the data and think why.</p>
+
+<p>Another way is to consider precision, recall and F-measure for correctly identified spans.
+(what is your spans F-measure?).</p>
+
+<p>You can perform span-level evaluation using this script: <a href="ner_eval.py">ner_eval.py</a>,
+which should be run as: 
+<code>
+python ner_eval.py gold_file predicted_file
+</code></p>
+
+<p><strong><em>make sure this program runs without exceptions; it will be used for grading</em></strong>.</p>
+
+<p>The span-based F scores are lower than the accuracy scores. Why?</p>
+
+<p>Can you improve the MEMM tagger on the NER data?</p>
+
+<p>(maybe these <a href="https://github.com/aritter/twitter_nlp/tree/master/data/annotated/wnut16/lexicon">lexicons</a> can help)</p>
+
+<p><b>What to submit:</b></p>
+
+<ol>
+<li><p>An ascii text file named <code>ner.txt</code> containing the per-token accuracy on the ner dev data, and the per-span precision, recall and F-measure on the ner dev data.
+You should include numbers based on the HMM and the MEMM taggers. Include also a brief discussion on the "Why"s above, and a brief description of your attempts to improve the MEMM tagger for the NER data.</p></li>
+<li><p>Files named <code>ner.memm.pred</code> and <code>ner.hmm.pred</code>, containing the predictions of your HMM and your MEMM models on the <code>test.blind</code> file.</p></li>
+</ol>
+
+<h1>Misc</h1>
+
+<p>Use python 3.x. You can use packages such as <code>sklearn</code> or <code>numpy</code>.</p>
+
+<p>The code should be able to run from the commandline, without using PyCharm or any other IDE.</p>
+
+<p>The code for all assignments should be submitted in a single <code>.zip</code> or <code>.tar.gz</code> file.</p>
+
+<p>The files for all the tasks should be inside a single directory (this is the directory you have to submit), <strong>named <code>assignment1</code></strong>)</p>
+
+<p>The writeup should be in the same directory, in a <code>pdf</code> file called <code>writeup.pdf</code>.</p>
+
+<p>You code should run from the commandline on a unix system according to the instruction provided in each section.</p>
+
+<p>For task Memm-1, please provide instructions on how to run your code, in a <code>README</code> file in the <code>memm1</code> folder.</p>
+
+<p>If your code cannot be run, you will receive a grade of 0.</p>
+
+<h1>Writeup</h1>
+
+<p>Your writeup should include the following:</p>
+
+<ol>
+<li>Describe how you handled unknown words in hmm1.</li>
+<li>Describe your pruning strategy in the Viterbi hmm.</li>
+<li>Report your test scores when running the each tagger (hmm-greedy, hmm-viterbi, maxent-greedy, memm-viterbi) on each dataset. For the NER dataset, report token accuracy accuracy, as well as span precision, recall and F1.</li>
+<li>Is there a difference in behavior between the hmm and maxent taggers? discuss.</li>
+<li>Is there a difference in behavior between the datasets? discuss.</li>
+<li>What will you change in the hmm tagger to improve accuracy on the named entities data?</li>
+<li>What will you change in the memm tagger to improve accuracy on the named entities data, on top of what you already did?</li>
+<li>Why are span scores lower than accuracy scores?</li>
+</ol>

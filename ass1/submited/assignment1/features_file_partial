@@ -1,0 +1,201 @@
+IN tag-1=<START> tag-2-1=<START>_<START> w_i=In word+1=an word+2=Oct. word+2_A-=True word+2_Aa=True word+2_CAPITAL=True word-1=START word-2=START
+DT tag-1=IN tag-2-1=<START>_IN w_i=an word+1=Oct. word+1_A-=True word+1_Aa=True word+1_CAPITAL=True word+2=19 word+2_2DIGITS=True word+2_NUM=True word-1=In word-1_A-=True word-1_Aa=True word-1_CAPITAL=True word-2=START
+NNP tag-1=DT tag-2-1=IN_DT w_i=Oct. word+1=19 word+1_2DIGITS=True word+1_NUM=True word+2=review word+2_re-=True word-1=an word-2=In word-2_A-=True word-2_Aa=True word-2_CAPITAL=True
+CD tag-1=NNP tag-2-1=DT_NNP w_i=19 word+1=review word+1_re-=True word+2=of word-1=Oct. word-1_A-=True word-1_Aa=True word-1_CAPITAL=True word-2=an
+NN tag-1=CD tag-2-1=NNP_CD w_i=review word+1=of word+2=`` word+2_NON_ALPHANUMERIC=True word-1=19 word-1_2DIGITS=True word-1_NUM=True word-2=Oct. word-2_A-=True word-2_Aa=True word-2_CAPITAL=True
+IN tag-1=NN tag-2-1=CD_NN w_i=of word+1=`` word+1_NON_ALPHANUMERIC=True word+2=The word+2_A-=True word+2_Aa=True word+2_CAPITAL=True word-1=review word-1_re-=True word-2=19 word-2_2DIGITS=True word-2_NUM=True
+`` tag-1=IN tag-2-1=NN_IN w_i=`` word+1=The word+1_A-=True word+1_Aa=True word+1_CAPITAL=True word+2=Misanthrope word+2_A-=True word+2_Aa=True word+2_CAPITAL=True word-1=of word-2=review word-2_re-=True
+DT tag-1=`` tag-2-1=IN_`` w_i=The word+1=Misanthrope word+1_A-=True word+1_Aa=True word+1_CAPITAL=True word+2='' word+2_NON_ALPHANUMERIC=True word-1=`` word-1_NON_ALPHANUMERIC=True word-2=of
+NN A-=True Aa=True CAPITAL=True prefix_1=M prefix_2=Mi prefix_3=Mis prefix_4=Misa suffix_1=e suffix_2=pe suffix_3=ope suffix_4=rope tag-1=DT tag-2-1=``_DT word+1='' word+1_NON_ALPHANUMERIC=True word+2=at word-1=The word-1_A-=True word-1_Aa=True word-1_CAPITAL=True word-2=`` word-2_NON_ALPHANUMERIC=True
+'' tag-1=NN tag-2-1=DT_NN w_i='' word+1=at word+2=Chicago word+2_A-=True word+2_Aa=True word+2_CAPITAL=True word-1=Misanthrope word-1_A-=True word-1_Aa=True word-1_CAPITAL=True word-2=The word-2_A-=True word-2_Aa=True word-2_CAPITAL=True
+IN tag-1='' tag-2-1=NN_'' w_i=at word+1=Chicago word+1_A-=True word+1_Aa=True word+1_CAPITAL=True word+2='s word-1='' word-1_NON_ALPHANUMERIC=True word-2=Misanthrope word-2_A-=True word-2_Aa=True word-2_CAPITAL=True
+NNP tag-1=IN tag-2-1=''_IN w_i=Chicago word+1='s word+2=Goodman word+2_-an=True word+2_A-=True word+2_Aa=True word+2_CAPITAL=True word-1=at word-2='' word-2_NON_ALPHANUMERIC=True
+POS tag-1=NNP tag-2-1=IN_NNP w_i='s word+1=Goodman word+1_-an=True word+1_A-=True word+1_Aa=True word+1_CAPITAL=True word+2=Theatre word+2_A-=True word+2_Aa=True word+2_CAPITAL=True word-1=Chicago word-1_A-=True word-1_Aa=True word-1_CAPITAL=True word-2=at
+NNP tag-1=POS tag-2-1=NNP_POS w_i=Goodman word+1=Theatre word+1_A-=True word+1_Aa=True word+1_CAPITAL=True word+2=( word+2_NON_ALPHANUMERIC=True word-1='s word-2=Chicago word-2_A-=True word-2_Aa=True word-2_CAPITAL=True
+NNP tag-1=NNP tag-2-1=POS_NNP w_i=Theatre word+1=( word+1_NON_ALPHANUMERIC=True word+2=`` word+2_NON_ALPHANUMERIC=True word-1=Goodman word-1_-an=True word-1_A-=True word-1_Aa=True word-1_CAPITAL=True word-2='s
+( tag-1=NNP tag-2-1=NNP_NNP w_i=( word+1=`` word+1_NON_ALPHANUMERIC=True word+2=Revitalized word+2_-ed=True word+2_A-=True word+2_Aa=True word+2_CAPITAL=True word-1=Theatre word-1_A-=True word-1_Aa=True word-1_CAPITAL=True word-2=Goodman word-2_-an=True word-2_A-=True word-2_Aa=True word-2_CAPITAL=True
+`` tag-1=( tag-2-1=NNP_( w_i=`` word+1=Revitalized word+1_-ed=True word+1_A-=True word+1_Aa=True word+1_CAPITAL=True word+2=Classics word+2_-s=True word+2_A-=True word+2_Aa=True word+2_CAPITAL=True word-1=( word-1_NON_ALPHANUMERIC=True word-2=Theatre word-2_A-=True word-2_Aa=True word-2_CAPITAL=True
+VBN -ed=True A-=True Aa=True CAPITAL=True prefix_1=R prefix_2=Re prefix_3=Rev prefix_4=Revi suffix_1=d suffix_2=ed suffix_3=zed suffix_4=ized tag-1=`` tag-2-1=(_`` word+1=Classics word+1_-s=True word+1_A-=True word+1_Aa=True word+1_CAPITAL=True word+2=Take word+2_A-=True word+2_Aa=True word+2_CAPITAL=True word-1=`` word-1_NON_ALPHANUMERIC=True word-2=( word-2_NON_ALPHANUMERIC=True
+NNS -s=True A-=True Aa=True CAPITAL=True prefix_1=C prefix_2=Cl prefix_3=Cla prefix_4=Clas suffix_1=s suffix_2=cs suffix_3=ics suffix_4=sics tag-1=VBN tag-2-1=``_VBN word+1=Take word+1_A-=True word+1_Aa=True word+1_CAPITAL=True word+2=the word-1=Revitalized word-1_-ed=True word-1_A-=True word-1_Aa=True word-1_CAPITAL=True word-2=`` word-2_NON_ALPHANUMERIC=True
+VBP tag-1=NNS tag-2-1=VBN_NNS w_i=Take word+1=the word+2=Stage word+2_A-=True word+2_Aa=True word+2_CAPITAL=True word-1=Classics word-1_-s=True word-1_A-=True word-1_Aa=True word-1_CAPITAL=True word-2=Revitalized word-2_-ed=True word-2_A-=True word-2_Aa=True word-2_CAPITAL=True
+DT tag-1=VBP tag-2-1=NNS_VBP w_i=the word+1=Stage word+1_A-=True word+1_Aa=True word+1_CAPITAL=True word+2=in word-1=Take word-1_A-=True word-1_Aa=True word-1_CAPITAL=True word-2=Classics word-2_-s=True word-2_A-=True word-2_Aa=True word-2_CAPITAL=True
+NN A-=True Aa=True CAPITAL=True prefix_1=S prefix_2=St prefix_3=Sta prefix_4=Stag suffix_1=e suffix_2=ge suffix_3=age suffix_4=tage tag-1=DT tag-2-1=VBP_DT word+1=in word+2=Windy word+2_-y=True word+2_A-=True word+2_Aa=True word+2_CAPITAL=True word-1=the word-2=Take word-2_A-=True word-2_Aa=True word-2_CAPITAL=True
+IN tag-1=NN tag-2-1=DT_NN w_i=in word+1=Windy word+1_-y=True word+1_A-=True word+1_Aa=True word+1_CAPITAL=True word+2=City word+2_-y=True word+2_A-=True word+2_Aa=True word+2_CAPITAL=True word-1=Stage word-1_A-=True word-1_Aa=True word-1_CAPITAL=True word-2=the
+NNP -y=True A-=True Aa=True CAPITAL=True prefix_1=W prefix_2=Wi prefix_3=Win prefix_4=Wind suffix_1=y suffix_2=dy suffix_3=ndy suffix_4=indy tag-1=IN tag-2-1=NN_IN word+1=City word+1_-y=True word+1_A-=True word+1_Aa=True word+1_CAPITAL=True word+2=, word+2_NON_ALPHANUMERIC=True word-1=in word-2=Stage word-2_A-=True word-2_Aa=True word-2_CAPITAL=True
+NNP tag-1=NNP tag-2-1=IN_NNP w_i=City word+1=, word+1_NON_ALPHANUMERIC=True word+2='' word+2_NON_ALPHANUMERIC=True word-1=Windy word-1_-y=True word-1_A-=True word-1_Aa=True word-1_CAPITAL=True word-2=in
+, tag-1=NNP tag-2-1=NNP_NNP w_i=, word+1='' word+1_NON_ALPHANUMERIC=True word+2=Leisure word+2_A-=True word+2_Aa=True word+2_CAPITAL=True word-1=City word-1_-y=True word-1_A-=True word-1_Aa=True word-1_CAPITAL=True word-2=Windy word-2_-y=True word-2_A-=True word-2_Aa=True word-2_CAPITAL=True
+'' tag-1=, tag-2-1=NNP_, w_i='' word+1=Leisure word+1_A-=True word+1_Aa=True word+1_CAPITAL=True word+2=& word+2_NON_ALPHANUMERIC=True word-1=, word-1_NON_ALPHANUMERIC=True word-2=City word-2_-y=True word-2_A-=True word-2_Aa=True word-2_CAPITAL=True
+NN A-=True Aa=True CAPITAL=True prefix_1=L prefix_2=Le prefix_3=Lei prefix_4=Leis suffix_1=e suffix_2=re suffix_3=ure suffix_4=sure tag-1='' tag-2-1=,_'' word+1=& word+1_NON_ALPHANUMERIC=True word+2=Arts word+2_-s=True word+2_A-=True word+2_Aa=True word+2_CAPITAL=True word-1='' word-1_NON_ALPHANUMERIC=True word-2=, word-2_NON_ALPHANUMERIC=True
+CC tag-1=NN tag-2-1=''_NN w_i=& word+1=Arts word+1_-s=True word+1_A-=True word+1_Aa=True word+1_CAPITAL=True word+2=) word+2_NON_ALPHANUMERIC=True word-1=Leisure word-1_A-=True word-1_Aa=True word-1_CAPITAL=True word-2='' word-2_NON_ALPHANUMERIC=True
+NNS tag-1=CC tag-2-1=NN_CC w_i=Arts word+1=) word+1_NON_ALPHANUMERIC=True word+2=, word+2_NON_ALPHANUMERIC=True word-1=& word-1_NON_ALPHANUMERIC=True word-2=Leisure word-2_A-=True word-2_Aa=True word-2_CAPITAL=True
+) tag-1=NNS tag-2-1=CC_NNS w_i=) word+1=, word+1_NON_ALPHANUMERIC=True word+2=the word-1=Arts word-1_-s=True word-1_A-=True word-1_Aa=True word-1_CAPITAL=True word-2=& word-2_NON_ALPHANUMERIC=True
+, tag-1=) tag-2-1=NNS_) w_i=, word+1=the word+2=role word-1=) word-1_NON_ALPHANUMERIC=True word-2=Arts word-2_-s=True word-2_A-=True word-2_Aa=True word-2_CAPITAL=True
+DT tag-1=, tag-2-1=)_, w_i=the word+1=role word+2=of word-1=, word-1_NON_ALPHANUMERIC=True word-2=) word-2_NON_ALPHANUMERIC=True
+NN tag-1=DT tag-2-1=,_DT w_i=role word+1=of word+2=Celimene word+2_A-=True word+2_Aa=True word+2_CAPITAL=True word-1=the word-2=, word-2_NON_ALPHANUMERIC=True
+IN tag-1=NN tag-2-1=DT_NN w_i=of word+1=Celimene word+1_A-=True word+1_Aa=True word+1_CAPITAL=True word+2=, word+2_NON_ALPHANUMERIC=True word-1=role word-2=the
+NNP A-=True Aa=True CAPITAL=True prefix_1=C prefix_2=Ce prefix_3=Cel prefix_4=Celi suffix_1=e suffix_2=ne suffix_3=ene suffix_4=mene tag-1=IN tag-2-1=NN_IN word+1=, word+1_NON_ALPHANUMERIC=True word+2=played word+2_-ed=True word-1=of word-2=role
+, tag-1=NNP tag-2-1=IN_NNP w_i=, word+1=played word+1_-ed=True word+2=by word-1=Celimene word-1_A-=True word-1_Aa=True word-1_CAPITAL=True word-2=of
+VBN tag-1=, tag-2-1=NNP_, w_i=played word+1=by word+2=Kim word+2_A-=True word+2_Aa=True word+2_CAPITAL=True word-1=, word-1_NON_ALPHANUMERIC=True word-2=Celimene word-2_A-=True word-2_Aa=True word-2_CAPITAL=True
+IN tag-1=VBN tag-2-1=,_VBN w_i=by word+1=Kim word+1_A-=True word+1_Aa=True word+1_CAPITAL=True word+2=Cattrall word+2_A-=True word+2_Aa=True word+2_CAPITAL=True word-1=played word-1_-ed=True word-2=, word-2_NON_ALPHANUMERIC=True
+NNP tag-1=IN tag-2-1=VBN_IN w_i=Kim word+1=Cattrall word+1_A-=True word+1_Aa=True word+1_CAPITAL=True word+2=, word+2_NON_ALPHANUMERIC=True word-1=by word-2=played word-2_-ed=True
+NNP A-=True Aa=True CAPITAL=True prefix_1=C prefix_2=Ca prefix_3=Cat prefix_4=Catt suffix_1=l suffix_2=ll suffix_3=all suffix_4=rall tag-1=NNP tag-2-1=IN_NNP word+1=, word+1_NON_ALPHANUMERIC=True word+2=was word+2_-s=True word-1=Kim word-1_A-=True word-1_Aa=True word-1_CAPITAL=True word-2=by
+, tag-1=NNP tag-2-1=NNP_NNP w_i=, word+1=was word+1_-s=True word+2=mistakenly word+2_-ly=True word+2_-y=True word+2_mis-=True word-1=Cattrall word-1_A-=True word-1_Aa=True word-1_CAPITAL=True word-2=Kim word-2_A-=True word-2_Aa=True word-2_CAPITAL=True
+VBD tag-1=, tag-2-1=NNP_, w_i=was word+1=mistakenly word+1_-ly=True word+1_-y=True word+1_mis-=True word+2=attributed word+2_-ed=True word-1=, word-1_NON_ALPHANUMERIC=True word-2=Cattrall word-2_A-=True word-2_Aa=True word-2_CAPITAL=True
+RB tag-1=VBD tag-2-1=,_VBD w_i=mistakenly word+1=attributed word+1_-ed=True word+2=to word-1=was word-1_-s=True word-2=, word-2_NON_ALPHANUMERIC=True
+VBN tag-1=RB tag-2-1=VBD_RB w_i=attributed word+1=to word+2=Christina word+2_A-=True word+2_Aa=True word+2_CAPITAL=True word-1=mistakenly word-1_-ly=True word-1_-y=True word-1_mis-=True word-2=was word-2_-s=True
+IN tag-1=VBN tag-2-1=RB_VBN w_i=to word+1=Christina word+1_A-=True word+1_Aa=True word+1_CAPITAL=True word+2=Haag word+2_A-=True word+2_Aa=True word+2_CAPITAL=True word-1=attributed word-1_-ed=True word-2=mistakenly word-2_-ly=True word-2_-y=True word-2_mis-=True
+NNP A-=True Aa=True CAPITAL=True prefix_1=C prefix_2=Ch prefix_3=Chr prefix_4=Chri suffix_1=a suffix_2=na suffix_3=ina suffix_4=tina tag-1=IN tag-2-1=VBN_IN word+1=Haag word+1_A-=True word+1_Aa=True word+1_CAPITAL=True word+2=. word+2_NON_ALPHANUMERIC=True word-1=to word-2=attributed word-2_-ed=True
+NNP A-=True Aa=True CAPITAL=True prefix_1=H prefix_2=Ha prefix_3=Haa prefix_4=Haag suffix_1=g suffix_2=ag suffix_3=aag suffix_4=Haag tag-1=NNP tag-2-1=IN_NNP word+1=. word+1_NON_ALPHANUMERIC=True word+2=<END> word-1=Christina word-1_A-=True word-1_Aa=True word-1_CAPITAL=True word-2=to
+. tag-1=NNP tag-2-1=NNP_NNP w_i=. word+1=<END> word+2=<END> word-1=Haag word-1_A-=True word-1_Aa=True word-1_CAPITAL=True word-2=Christina word-2_A-=True word-2_Aa=True word-2_CAPITAL=True
+NNP tag-1=<START> tag-2-1=<START>_<START> w_i=Ms. word+1=Haag word+1_A-=True word+1_Aa=True word+1_CAPITAL=True word+2=plays word+2_-s=True word-1=START word-2=START
+NNP A-=True Aa=True CAPITAL=True prefix_1=H prefix_2=Ha prefix_3=Haa prefix_4=Haag suffix_1=g suffix_2=ag suffix_3=aag suffix_4=Haag tag-1=NNP tag-2-1=<START>_NNP word+1=plays word+1_-s=True word+2=Elianti word+2_A-=True word+2_Aa=True word+2_CAPITAL=True word-1=Ms. word-1_A-=True word-1_Aa=True word-1_CAPITAL=True word-2=START
+VBZ tag-1=NNP tag-2-1=NNP_NNP w_i=plays word+1=Elianti word+1_A-=True word+1_Aa=True word+1_CAPITAL=True word+2=. word+2_NON_ALPHANUMERIC=True word-1=Haag word-1_A-=True word-1_Aa=True word-1_CAPITAL=True word-2=Ms. word-2_A-=True word-2_Aa=True word-2_CAPITAL=True
+NNP A-=True Aa=True CAPITAL=True prefix_1=E prefix_2=El prefix_3=Eli prefix_4=Elia suffix_1=i suffix_2=ti suffix_3=nti suffix_4=anti tag-1=VBZ tag-2-1=NNP_VBZ word+1=. word+1_NON_ALPHANUMERIC=True word+2=<END> word-1=plays word-1_-s=True word-2=Haag word-2_A-=True word-2_Aa=True word-2_CAPITAL=True
+. tag-1=NNP tag-2-1=VBZ_NNP w_i=. word+1=<END> word+2=<END> word-1=Elianti word-1_A-=True word-1_Aa=True word-1_CAPITAL=True word-2=plays word-2_-s=True
+NNP A-=True Aa=True CAPITAL=True HYPHEN=True prefix_1=R prefix_2=Ro prefix_3=Rol prefix_4=Roll suffix_1=e suffix_2=ce suffix_3=yce suffix_4=oyce tag-1=<START> tag-2-1=<START>_<START> word+1=Motor word+1_-or=True word+1_A-=True word+1_Aa=True word+1_CAPITAL=True word+2=Cars word+2_-s=True word+2_A-=True word+2_Aa=True word+2_CAPITAL=True word-1=START word-2=START
+NNP tag-1=NNP tag-2-1=<START>_NNP w_i=Motor word+1=Cars word+1_-s=True word+1_A-=True word+1_Aa=True word+1_CAPITAL=True word+2=Inc. word+2_A-=True word+2_Aa=True word+2_CAPITAL=True word-1=Rolls-Royce word-1_A-=True word-1_Aa=True word-1_CAPITAL=True word-1_HYPHEN=True word-2=START
+NNPS -s=True A-=True Aa=True CAPITAL=True prefix_1=C prefix_2=Ca prefix_3=Car prefix_4=Cars suffix_1=s suffix_2=rs suffix_3=ars suffix_4=Cars tag-1=NNP tag-2-1=NNP_NNP word+1=Inc. word+1_A-=True word+1_Aa=True word+1_CAPITAL=True word+2=said word-1=Motor word-1_-or=True word-1_A-=True word-1_Aa=True word-1_CAPITAL=True word-2=Rolls-Royce word-2_A-=True word-2_Aa=True word-2_CAPITAL=True word-2_HYPHEN=True
+NNP tag-1=NNPS tag-2-1=NNP_NNPS w_i=Inc. word+1=said word+2=it word-1=Cars word-1_-s=True word-1_A-=True word-1_Aa=True word-1_CAPITAL=True word-2=Motor word-2_-or=True word-2_A-=True word-2_Aa=True word-2_CAPITAL=True
+VBD tag-1=NNP tag-2-1=NNPS_NNP w_i=said word+1=it word+2=expects word+2_-s=True word-1=Inc. word-1_A-=True word-1_Aa=True word-1_CAPITAL=True word-2=Cars word-2_-s=True word-2_A-=True word-2_Aa=True word-2_CAPITAL=True
+PRP tag-1=VBD tag-2-1=NNP_VBD w_i=it word+1=expects word+1_-s=True word+2=its word+2_-s=True word-1=said word-2=Inc. word-2_A-=True word-2_Aa=True word-2_CAPITAL=True
+VBZ tag-1=PRP tag-2-1=VBD_PRP w_i=expects word+1=its word+1_-s=True word+2=U.S. word+2_A-=True word+2_CAPITAL=True word-1=it word-2=said
+PRP$ tag-1=VBZ tag-2-1=PRP_VBZ w_i=its word+1=U.S. word+1_A-=True word+1_CAPITAL=True word+2=sales word+2_-es=True word+2_-s=True word-1=expects word-1_-s=True word-2=it
+NNP tag-1=PRP$ tag-2-1=VBZ_PRP$ w_i=U.S. word+1=sales word+1_-es=True word+1_-s=True word+2=to word-1=its word-1_-s=True word-2=expects word-2_-s=True
+NNS tag-1=NNP tag-2-1=PRP$_NNP w_i=sales word+1=to word+2=remain word+2_re-=True word-1=U.S. word-1_A-=True word-1_CAPITAL=True word-2=its word-2_-s=True
+TO tag-1=NNS tag-2-1=NNP_NNS w_i=to word+1=remain word+1_re-=True word+2=steady word+2_-y=True word-1=sales word-1_-es=True word-1_-s=True word-2=U.S. word-2_A-=True word-2_CAPITAL=True
+VB tag-1=TO tag-2-1=NNS_TO w_i=remain word+1=steady word+1_-y=True word+2=at word-1=to word-2=sales word-2_-es=True word-2_-s=True
+JJ tag-1=VB tag-2-1=TO_VB w_i=steady word+1=at word+2=about word-1=remain word-1_re-=True word-2=to
+IN tag-1=JJ tag-2-1=VB_JJ w_i=at word+1=about word+2=1,200 word+2_NUM=True word-1=steady word-1_-y=True word-2=remain word-2_re-=True
+IN tag-1=IN tag-2-1=JJ_IN w_i=about word+1=1,200 word+1_NUM=True word+2=cars word+2_-s=True word-1=at word-2=steady word-2_-y=True
+CD tag-1=IN tag-2-1=IN_IN w_i=1,200 word+1=cars word+1_-s=True word+2=in word-1=about word-2=at
+NNS tag-1=CD tag-2-1=IN_CD w_i=cars word+1=in word+2=1990 word+2_4DIGITS=True word+2_NUM=True word-1=1,200 word-1_NUM=True word-2=about
+IN tag-1=NNS tag-2-1=CD_NNS w_i=in word+1=1990 word+1_4DIGITS=True word+1_NUM=True word+2=. word+2_NON_ALPHANUMERIC=True word-1=cars word-1_-s=True word-2=1,200 word-2_NUM=True
+CD tag-1=IN tag-2-1=NNS_IN w_i=1990 word+1=. word+1_NON_ALPHANUMERIC=True word+2=<END> word-1=in word-2=cars word-2_-s=True
+. tag-1=CD tag-2-1=IN_CD w_i=. word+1=<END> word+2=<END> word-1=1990 word-1_4DIGITS=True word-1_NUM=True word-2=in
+DT tag-1=<START> tag-2-1=<START>_<START> w_i=The word+1=luxury word+1_-y=True word+2=auto word-1=START word-2=START
+NN tag-1=DT tag-2-1=<START>_DT w_i=luxury word+1=auto word+2=maker word+2_-er=True word-1=The word-1_A-=True word-1_Aa=True word-1_CAPITAL=True word-2=START
+NN tag-1=NN tag-2-1=DT_NN w_i=auto word+1=maker word+1_-er=True word+2=last word+2_-st=True word-1=luxury word-1_-y=True word-2=The word-2_A-=True word-2_Aa=True word-2_CAPITAL=True
+NN tag-1=NN tag-2-1=NN_NN w_i=maker word+1=last word+1_-st=True word+2=year word-1=auto word-2=luxury word-2_-y=True
+JJ tag-1=NN tag-2-1=NN_NN w_i=last word+1=year word+2=sold word-1=maker word-1_-er=True word-2=auto
+NN tag-1=JJ tag-2-1=NN_JJ w_i=year word+1=sold word+2=1,214 word+2_NUM=True word-1=last word-1_-st=True word-2=maker word-2_-er=True
+VBD tag-1=NN tag-2-1=JJ_NN w_i=sold word+1=1,214 word+1_NUM=True word+2=cars word+2_-s=True word-1=year word-2=last word-2_-st=True
+CD NUM=True prefix_1=1 prefix_2=1, prefix_3=1,2 prefix_4=1,21 suffix_1=4 suffix_2=14 suffix_3=214 suffix_4=,214 tag-1=VBD tag-2-1=NN_VBD word+1=cars word+1_-s=True word+2=in word-1=sold word-2=year
+NNS tag-1=CD tag-2-1=VBD_CD w_i=cars word+1=in word+2=the word-1=1,214 word-1_NUM=True word-2=sold
+IN tag-1=NNS tag-2-1=CD_NNS w_i=in word+1=the word+2=U.S. word+2_A-=True word+2_CAPITAL=True word-1=cars word-1_-s=True word-2=1,214 word-2_NUM=True
+DT tag-1=IN tag-2-1=NNS_IN w_i=the word+1=U.S. word+1_A-=True word+1_CAPITAL=True word+2=<END> word-1=in word-2=cars word-2_-s=True
+NNP tag-1=DT tag-2-1=IN_DT w_i=U.S. word+1=<END> word+2=<END> word-1=the word-2=in
+NNP tag-1=<START> tag-2-1=<START>_<START> w_i=Howard word+1=Mosher word+1_-er=True word+1_A-=True word+1_Aa=True word+1_CAPITAL=True word+2=, word+2_NON_ALPHANUMERIC=True word-1=START word-2=START
+NNP -er=True A-=True Aa=True CAPITAL=True prefix_1=M prefix_2=Mo prefix_3=Mos prefix_4=Mosh suffix_1=r suffix_2=er suffix_3=her suffix_4=sher tag-1=NNP tag-2-1=<START>_NNP word+1=, word+1_NON_ALPHANUMERIC=True word+2=president word+2_pre-=True word-1=Howard word-1_-ward=True word-1_A-=True word-1_Aa=True word-1_CAPITAL=True word-2=START
+, tag-1=NNP tag-2-1=NNP_NNP w_i=, word+1=president word+1_pre-=True word+2=and word-1=Mosher word-1_-er=True word-1_A-=True word-1_Aa=True word-1_CAPITAL=True word-2=Howard word-2_-ward=True word-2_A-=True word-2_Aa=True word-2_CAPITAL=True
+NN tag-1=, tag-2-1=NNP_, w_i=president word+1=and word+2=chief word-1=, word-1_NON_ALPHANUMERIC=True word-2=Mosher word-2_-er=True word-2_A-=True word-2_Aa=True word-2_CAPITAL=True
+CC tag-1=NN tag-2-1=,_NN w_i=and word+1=chief word+2=executive word+2_-ive=True word-1=president word-1_pre-=True word-2=, word-2_NON_ALPHANUMERIC=True
+JJ tag-1=CC tag-2-1=NN_CC w_i=chief word+1=executive word+1_-ive=True word+2=officer word+2_-er=True word-1=and word-2=president word-2_pre-=True
+NN tag-1=JJ tag-2-1=CC_JJ w_i=executive word+1=officer word+1_-er=True word+2=, word+2_NON_ALPHANUMERIC=True word-1=chief word-2=and
+NN tag-1=NN tag-2-1=JJ_NN w_i=officer word+1=, word+1_NON_ALPHANUMERIC=True word+2=said word-1=executive word-1_-ive=True word-2=chief
+, tag-1=NN tag-2-1=NN_NN w_i=, word+1=said word+2=he word-1=officer word-1_-er=True word-2=executive word-2_-ive=True
+VBD tag-1=, tag-2-1=NN_, w_i=said word+1=he word+2=anticipates word+2_-es=True word+2_-s=True word+2_anti-=True word-1=, word-1_NON_ALPHANUMERIC=True word-2=officer word-2_-er=True
+PRP tag-1=VBD tag-2-1=,_VBD w_i=he word+1=anticipates word+1_-es=True word+1_-s=True word+1_anti-=True word+2=growth word-1=said word-2=, word-2_NON_ALPHANUMERIC=True
+VBZ tag-1=PRP tag-2-1=VBD_PRP w_i=anticipates word+1=growth word+2=for word-1=he word-2=said
+NN tag-1=VBZ tag-2-1=PRP_VBZ w_i=growth word+1=for word+2=the word-1=anticipates word-1_-es=True word-1_-s=True word-1_anti-=True word-2=he
+IN tag-1=NN tag-2-1=VBZ_NN w_i=for word+1=the word+2=luxury word+2_-y=True word-1=growth word-2=anticipates word-2_-es=True word-2_-s=True word-2_anti-=True
+VB tag-1=TO tag-2-1=VB_TO w_i=fly word+1=the word+2=airplanes word+2_-es=True word+2_-s=True word-1=to word-2=refuse word-2_re-=True
+DT tag-1=VB tag-2-1=TO_VB w_i=the word+1=airplanes word+1_-es=True word+1_-s=True word+2=. word+2_NON_ALPHANUMERIC=True word-1=fly word-1_-y=True word-2=to
+NNS tag-1=DT tag-2-1=VB_DT w_i=airplanes word+1=. word+1_NON_ALPHANUMERIC=True word+2=<END> word-1=the word-2=fly word-2_-y=True
+. tag-1=NNS tag-2-1=DT_NNS w_i=. word+1=<END> word+2=<END> word-1=airplanes word-1_-es=True word-1_-s=True word-2=the
+IN tag-1=<START> tag-2-1=<START>_<START> w_i=If word+1=they word+1_-y=True word+2=were word-1=START word-2=START
+PRP tag-1=IN tag-2-1=<START>_IN w_i=they word+1=were word+2=to word-1=If word-1_A-=True word-1_Aa=True word-1_CAPITAL=True word-2=START
+VBD tag-1=PRP tag-2-1=IN_PRP w_i=were word+1=to word+2=insist word+2_-ist=True word+2_-st=True word+2_in-=True word-1=they word-1_-y=True word-2=If word-2_A-=True word-2_Aa=True word-2_CAPITAL=True
+TO tag-1=VBD tag-2-1=PRP_VBD w_i=to word+1=insist word+1_-ist=True word+1_-st=True word+1_in-=True word+2=on word-1=were word-2=they word-2_-y=True
+VB tag-1=TO tag-2-1=VBD_TO w_i=insist word+1=on word+2=a word-1=to word-2=were
+IN tag-1=VB tag-2-1=TO_VB w_i=on word+1=a word+2=low word-1=insist word-1_-ist=True word-1_-st=True word-1_in-=True word-2=to
+DT tag-1=IN tag-2-1=VB_IN w_i=a word+1=low word+2=bid word-1=on word-2=insist word-2_-ist=True word-2_-st=True word-2_in-=True
+JJ tag-1=DT tag-2-1=IN_DT w_i=low word+1=bid word+2=of word-1=a word-2=on
+NN tag-1=JJ tag-2-1=DT_JJ w_i=bid word+1=of word+2=, word+2_NON_ALPHANUMERIC=True word-1=low word-2=a
+IN tag-1=NN tag-2-1=JJ_NN w_i=of word+1=, word+1_NON_ALPHANUMERIC=True word+2=say word+2_-y=True word-1=bid word-2=low
+, tag-1=IN tag-2-1=NN_IN w_i=, word+1=say word+1_-y=True word+2=$ word+2_NON_ALPHANUMERIC=True word-1=of word-2=bid
+VB tag-1=, tag-2-1=IN_, w_i=say word+1=$ word+1_NON_ALPHANUMERIC=True word+2=200 word+2_NUM=True word-1=, word-1_NON_ALPHANUMERIC=True word-2=of
+$ tag-1=VB tag-2-1=,_VB w_i=$ word+1=200 word+1_NUM=True word+2=a word-1=say word-1_-y=True word-2=, word-2_NON_ALPHANUMERIC=True
+CD tag-1=$ tag-2-1=VB_$ w_i=200 word+1=a word+2=share word-1=$ word-1_NON_ALPHANUMERIC=True word-2=say word-2_-y=True
+DT tag-1=CD tag-2-1=$_CD w_i=a word+1=share word+2=, word+2_NON_ALPHANUMERIC=True word-1=200 word-1_NUM=True word-2=$ word-2_NON_ALPHANUMERIC=True
+NN tag-1=DT tag-2-1=CD_DT w_i=share word+1=, word+1_NON_ALPHANUMERIC=True word+2=the word-1=a word-2=200 word-2_NUM=True
+, tag-1=NN tag-2-1=DT_NN w_i=, word+1=the word+2=board word-1=share word-2=a
+DT tag-1=, tag-2-1=NN_, w_i=the word+1=board word+2=might word-1=, word-1_NON_ALPHANUMERIC=True word-2=share
+NN tag-1=DT tag-2-1=,_DT w_i=board word+1=might word+2=n't word-1=the word-2=, word-2_NON_ALPHANUMERIC=True
+MD tag-1=NN tag-2-1=DT_NN w_i=might word+1=n't word+2=be word-1=board word-2=the
+RB tag-1=MD tag-2-1=NN_MD w_i=n't word+1=be word+2=able word-1=might word-2=board
+VB tag-1=RB tag-2-1=MD_RB w_i=be word+1=able word+2=to word-1=n't word-2=might
+JJ tag-1=VB tag-2-1=RB_VB w_i=able word+1=to word+2=obtain word-1=be word-2=n't
+TO tag-1=JJ tag-2-1=VB_JJ w_i=to word+1=obtain word+2=a word-1=able word-2=be
+VB tag-1=TO tag-2-1=JJ_TO w_i=obtain word+1=a word+2=higher word+2_-er=True word-1=to word-2=able
+DT tag-1=VB tag-2-1=TO_VB w_i=a word+1=higher word+1_-er=True word+2=offer word+2_-er=True word-1=obtain word-2=to
+JJR tag-1=DT tag-2-1=VB_DT w_i=higher word+1=offer word+1_-er=True word+2=from word-1=a word-2=obtain
+NN tag-1=JJR tag-2-1=DT_JJR w_i=offer word+1=from word+2=other word+2_-er=True word-1=higher word-1_-er=True word-2=a
+IN tag-1=NN tag-2-1=JJR_NN w_i=from word+1=other word+1_-er=True word+2=bidders word+2_-s=True word-1=offer word-1_-er=True word-2=higher word-2_-er=True
+JJ tag-1=IN tag-2-1=NN_IN w_i=other word+1=bidders word+1_-s=True word+2=because word-1=from word-2=offer word-2_-er=True
+NNS tag-1=JJ tag-2-1=IN_JJ w_i=bidders word+1=because word+2=banks word+2_-s=True word-1=other word-1_-er=True word-2=from
+IN tag-1=NNS tag-2-1=JJ_NNS w_i=because word+1=banks word+1_-s=True word+2=might word-1=bidders word-1_-s=True word-2=other word-2_-er=True
+NNS tag-1=IN tag-2-1=NNS_IN w_i=banks word+1=might word+2=hesitate word-1=because word-2=bidders word-2_-s=True
+MD tag-1=NNS tag-2-1=IN_NNS w_i=might word+1=hesitate word+2=to word-1=banks word-1_-s=True word-2=because
+VB tag-1=MD tag-2-1=NNS_MD w_i=hesitate word+1=to word+2=finance word-1=might word-2=banks word-2_-s=True
+TO tag-1=VB tag-2-1=MD_VB w_i=to word+1=finance word+2=a word-1=hesitate word-2=might
+VB tag-1=TO tag-2-1=VB_TO w_i=finance word+1=a word+2=transaction word+2_trans-=True word-1=to word-2=hesitate
+DT tag-1=VB tag-2-1=TO_VB w_i=a word+1=transaction word+1_trans-=True word+2=the word-1=finance word-2=to
+NN tag-1=DT tag-2-1=VB_DT w_i=transaction word+1=the word+2=pilots word+2_-s=True word-1=a word-2=finance
+DT tag-1=NN tag-2-1=DT_NN w_i=the word+1=pilots word+1_-s=True word+2=oppose word-1=transaction word-1_trans-=True word-2=a
+NNS tag-1=DT tag-2-1=NN_DT w_i=pilots word+1=oppose word+2=. word+2_NON_ALPHANUMERIC=True word-1=the word-2=transaction word-2_trans-=True
+VBP tag-1=NNS tag-2-1=DT_NNS w_i=oppose word+1=. word+1_NON_ALPHANUMERIC=True word+2=<END> word-1=pilots word-1_-s=True word-2=the
+. tag-1=VBP tag-2-1=NNS_VBP w_i=. word+1=<END> word+2=<END> word-1=oppose word-2=pilots word-2_-s=True
+RB tag-1=<START> tag-2-1=<START>_<START> w_i=Also word+1=, word+1_NON_ALPHANUMERIC=True word+2=because word-1=START word-2=START
+, tag-1=RB tag-2-1=<START>_RB w_i=, word+1=because word+2=UAL word+2_A-=True word+2_AAA=True word+2_CAPITAL=True word-1=Also word-1_A-=True word-1_Aa=True word-1_CAPITAL=True word-2=START
+IN tag-1=, tag-2-1=RB_, w_i=because word+1=UAL word+1_A-=True word+1_AAA=True word+1_CAPITAL=True word+2=Chairman word+2_-an=True word+2_A-=True word+2_Aa=True word+2_CAPITAL=True word-1=, word-1_NON_ALPHANUMERIC=True word-2=Also word-2_A-=True word-2_Aa=True word-2_CAPITAL=True
+NNP tag-1=IN tag-2-1=,_IN w_i=UAL word+1=Chairman word+1_-an=True word+1_A-=True word+1_Aa=True word+1_CAPITAL=True word+2=Stephen word+2_-en=True word+2_A-=True word+2_Aa=True word+2_CAPITAL=True word-1=because word-2=, word-2_NON_ALPHANUMERIC=True
+NNP tag-1=NNP tag-2-1=IN_NNP w_i=Chairman word+1=Stephen word+1_-en=True word+1_A-=True word+1_Aa=True word+1_CAPITAL=True word+2=Wolf word+2_A-=True word+2_Aa=True word+2_CAPITAL=True word-1=UAL word-1_A-=True word-1_AAA=True word-1_CAPITAL=True word-2=because
+NNP tag-1=NNP tag-2-1=NNP_NNP w_i=Stephen word+1=Wolf word+1_A-=True word+1_Aa=True word+1_CAPITAL=True word+2=and word-1=Chairman word-1_-an=True word-1_A-=True word-1_Aa=True word-1_CAPITAL=True word-2=UAL word-2_A-=True word-2_AAA=True word-2_CAPITAL=True
+NNP tag-1=NNP tag-2-1=NNP_NNP w_i=Wolf word+1=and word+2=other word+2_-er=True word-1=Stephen word-1_-en=True word-1_A-=True word-1_Aa=True word-1_CAPITAL=True word-2=Chairman word-2_-an=True word-2_A-=True word-2_Aa=True word-2_CAPITAL=True
+CC tag-1=NNP tag-2-1=NNP_NNP w_i=and word+1=other word+1_-er=True word+2=UAL word+2_A-=True word+2_AAA=True word+2_CAPITAL=True word-1=Wolf word-1_A-=True word-1_Aa=True word-1_CAPITAL=True word-2=Stephen word-2_-en=True word-2_A-=True word-2_Aa=True word-2_CAPITAL=True
+JJ tag-1=CC tag-2-1=NNP_CC w_i=other word+1=UAL word+1_A-=True word+1_AAA=True word+1_CAPITAL=True word+2=executives word+2_-es=True word+2_-s=True word-1=and word-2=Wolf word-2_A-=True word-2_Aa=True word-2_CAPITAL=True
+NNP tag-1=JJ tag-2-1=CC_JJ w_i=UAL word+1=executives word+1_-es=True word+1_-s=True word+2=have word-1=other word-1_-er=True word-2=and
+NNS tag-1=NNP tag-2-1=JJ_NNP w_i=executives word+1=have word+2=joined word+2_-ed=True word-1=UAL word-1_A-=True word-1_AAA=True word-1_CAPITAL=True word-2=other word-2_-er=True
+VBP tag-1=NNS tag-2-1=NNP_NNS w_i=have word+1=joined word+1_-ed=True word+2=the word-1=executives word-1_-es=True word-1_-s=True word-2=UAL word-2_A-=True word-2_AAA=True word-2_CAPITAL=True
+VBN tag-1=VBP tag-2-1=NNS_VBP w_i=joined word+1=the word+2=pilots word+2_-s=True word-1=have word-2=executives word-2_-es=True word-2_-s=True
+DT tag-1=VBN tag-2-1=VBP_VBN w_i=the word+1=pilots word+1_-s=True word+2=' word+2_NON_ALPHANUMERIC=True word-1=joined word-1_-ed=True word-2=have
+NNS tag-1=DT tag-2-1=VBN_DT w_i=pilots word+1=' word+1_NON_ALPHANUMERIC=True word+2=bid word-1=the word-2=joined word-2_-ed=True
+POS tag-1=NNS tag-2-1=DT_NNS w_i=' word+1=bid word+2=, word+2_NON_ALPHANUMERIC=True word-1=pilots word-1_-s=True word-2=the
+NN tag-1=POS tag-2-1=NNS_POS w_i=bid word+1=, word+1_NON_ALPHANUMERIC=True word+2=the word-1=' word-1_NON_ALPHANUMERIC=True word-2=pilots word-2_-s=True
+, tag-1=NN tag-2-1=POS_NN w_i=, word+1=the word+2=board word-1=bid word-2=' word-2_NON_ALPHANUMERIC=True
+DT tag-1=, tag-2-1=NN_, w_i=the word+1=board word+2=might word-1=, word-1_NON_ALPHANUMERIC=True word-2=bid
+NN tag-1=DT tag-2-1=,_DT w_i=board word+1=might word+2=be word-1=the word-2=, word-2_NON_ALPHANUMERIC=True
+MD tag-1=NN tag-2-1=DT_NN w_i=might word+1=be word+2=forced word+2_-ed=True word-1=board word-2=the
+VB tag-1=MD tag-2-1=NN_MD w_i=be word+1=forced word+1_-ed=True word+2=to word-1=might word-2=board
+VBN tag-1=VB tag-2-1=MD_VB w_i=forced word+1=to word+2=exclude word-1=be word-2=might
+TO tag-1=VBN tag-2-1=VB_VBN w_i=to word+1=exclude word+2=him word-1=forced word-1_-ed=True word-2=be
+VB tag-1=TO tag-2-1=VBN_TO w_i=exclude word+1=him word+2=from word-1=to word-2=forced word-2_-ed=True
+PRP tag-1=VB tag-2-1=TO_VB w_i=him word+1=from word+2=its word+2_-s=True word-1=exclude word-2=to
+IN tag-1=PRP tag-2-1=VB_PRP w_i=from word+1=its word+1_-s=True word+2=deliberations word+2_-s=True word+2_de-=True word-1=him word-2=exclude
+PRP$ tag-1=IN tag-2-1=PRP_IN w_i=its word+1=deliberations word+1_-s=True word+1_de-=True word+2=in word-1=from word-2=him
+NNS tag-1=PRP$ tag-2-1=IN_PRP$ w_i=deliberations word+1=in word+2=order word+2_-er=True word-1=its word-1_-s=True word-2=from
+IN tag-1=NNS tag-2-1=PRP$_NNS w_i=in word+1=order word+1_-er=True word+2=to word-1=deliberations word-1_-s=True word-1_de-=True word-2=its word-2_-s=True
+NN tag-1=IN tag-2-1=NNS_IN w_i=order word+1=to word+2=be word-1=in word-2=deliberations word-2_-s=True word-2_de-=True
+TO tag-1=NN tag-2-1=IN_NN w_i=to word+1=be word+2=fair word-1=order word-1_-er=True word-2=in
+VB tag-1=TO tag-2-1=NN_TO w_i=be word+1=fair word+2=to word-1=to word-2=order word-2_-er=True
+JJ tag-1=VB tag-2-1=TO_VB w_i=fair word+1=to word+2=other word+2_-er=True word-1=be word-2=to
+IN tag-1=JJ tag-2-1=VB_JJ w_i=to word+1=other word+1_-er=True word+2=bidders word+2_-s=True word-1=fair word-2=be
+JJ tag-1=IN tag-2-1=JJ_IN w_i=other word+1=bidders word+1_-s=True word+2=. word+2_NON_ALPHANUMERIC=True word-1=to word-2=fair
+NNS tag-1=JJ tag-2-1=IN_JJ w_i=bidders word+1=. word+1_NON_ALPHANUMERIC=True word+2=<END> word-1=other word-1_-er=True word-2=to
+. tag-1=NNS tag-2-1=JJ_NNS w_i=. word+1=<END> word+2=<END> word-1=bidders word-1_-s=True word-2=other word-2_-er=True
+DT tag-1=<START> tag-2-1=<START>_<START> w_i=That word+1=could word+2=cost word+2_-st=True word-1=START word-2=START
+MD tag-1=DT tag-2-1=<START>_DT w_i=could word+1=cost word+1_-st=True word+2=him word-1=That word-1_A-=True word-1_Aa=True word-1_CAPITAL=True word-2=START
+VB tag-1=MD tag-2-1=DT_MD w_i=cost word+1=him word+2=the word-1=could word-2=That word-2_A-=True word-2_Aa=True word-2_CAPITAL=True
+PRP tag-1=VB tag-2-1=MD_VB w_i=him word+1=the word+2=chance word-1=cost word-1_-st=True word-2=could
+DT tag-1=PRP tag-2-1=VB_PRP w_i=the word+1=chance word+2=to word-1=him word-2=cost word-2_-st=True
+NN tag-1=DT tag-2-1=PRP_DT w_i=chance word+1=to word+2=influence word+2_in-=True word-1=the word-2=him
+TO tag-1=NN tag-2-1=DT_NN w_i=to word+1=influence word+1_in-=True word+2=the word-1=chance word-2=the
+VB tag-1=TO tag-2-1=NN_TO w_i=influence word+1=the word+2=outcome word+2_out-=True word-1=to word-2=chance
+DT tag-1=VB tag-2-1=TO_VB w_i=the word+1=outcome word+1_out-=True word+2=and word-1=influence word-1_in-=True word-2=to
+NN tag-1=DT tag-2-1=VB_DT w_i=outcome word+1=and word+2=perhaps word+2_-s=True word-1=the word-2=influence word-2_in-=True
+CC tag-1=NN tag-2-1=DT_NN w_i=and word+1=perhaps word+1_-s=True word+2=join word-1=outcome word-1_out-=True word-2=the
+RB tag-1=CC tag-2-1=NN_CC w_i=perhaps word+1=join word+2=the word-1=and word-2=outcome word-2_out-=True
+VB tag-1=RB tag-2-1=CC_RB w_i=join word+1=the word+2=winning word+2_-ing=True word-1=perhaps word-1_-s=True word-2=and
+DT tag-1=VB tag-2-1=RB_VB w_i=the word+1=winning word+1_-ing=True word+2=bidder word+2_-er=True word-1=join word-2=perhaps word-2_-s=True
+VBG tag-1=DT tag-2-1=VB_DT w_i=winning word+1=bidder word+1_-er=True word+2=. word+2_NON_ALPHANUMERIC=True word-1=the word-2=join
+NN tag-1=VBG tag-2-1=DT_VBG w_i=bidder word+1=. word+1_NON_ALPHANUMERIC=True word+2=<END> word-1=winning word-1_-ing=True word-2=the. tag-1=NN tag-2-1=VBG_NN w_i=. word+1=<END> word+2=<END> word-1=bidder word-1_-er=True word-2=winning word-2_-ing=True

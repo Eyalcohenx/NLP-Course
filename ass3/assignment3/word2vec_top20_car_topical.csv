@@ -1,0 +1,21 @@
+,bow5,,dependency
+1,cars,1, truck
+1,truck,1, suv
+1,automobile,1, vehicle
+1,vehicle,1, minivan
+1,motorbike,1, cars
+1,motorcycle,1, speedboat
+1,driver,1, racecar
+1,minivan,1, automobile
+1,suv,1, motorcar
+1,lorry,1, jeep
+1,motorcar,1, limousine
+1,mid-engined,1, minibus
+1,limousine,1, lorry
+1,front-engined,1, limo
+1,moped,1, motorcycle
+1,motorhome,1, bike
+1,mercedes-benz,1, motorhome
+1,bike,1, taxicab
+1,rear-engined,1, roadster
+1,three-wheeled,1, wagon

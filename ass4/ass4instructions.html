@@ -1,0 +1,178 @@
+<p><link href="../swiss.css" rel=stylesheet></link></p>
+
+<p><a href="../index.html">nlp 2019 course</a></p>
+
+<h1>Assignment 4: Relation Extraction</h1>
+
+<p>In this assignment, you will implement a Relation Extraction (RE) system, making use of the output of the various NLP tools you learned about in the course.
+The assignment is somewhat open-ended, and you are not restricted as to the methods you are expected to use. You can write either a rule-based system, a machine-learning based system, or a hybrid system combining both approaches.  </p>
+
+<!--Regardess of the method you choose, we exepct you to put effort into it and implement a non-trivial system.-->
+
+<h2>Relation Extraction (RE)</h2>
+
+<p>RE aims at extracting semantic relations between entities from a given text.
+We will focus on extracting binary relations, i.e. relations between exactly two entities,
+from sentences. We will denote the relations <code>rel(arg1,arg2)</code> where <code>arg1</code> and <code>arg2</code> are the two entities in a predefined relation <code>rel</code> within a sentence <code>S</code>. </p>
+
+<p>Given a sentence, the task is to decide whether the sentence contains a mention 
+of a relation of interest, and if yes -- extract the relation name and the two 
+corresponding entities.</p>
+
+<p>In this assignment we will be looking for the following relations:</p>
+
+<ul>
+<li><code>Work for</code>, e.g. <code>Work_For(Yoav Goldberg, Bar Ilan University)</code> </li>
+<li><code>Live in</code>, e.g. <code>Live_In(Ido Dagan, Israel)</code> </li>
+</ul>
+
+<p>Note that the order of the entities within a relation is important, e.g. compare <code>Work_For(Yoav Goldberg, Bar Ilan University)</code> and <code>Work_For(Bar Ilan University, Yoav Goldberg)</code>. The first relation is correct while the second is not (although it could be nice if that was the case).</p>
+
+<p>You need to identify one of these relations (WorkFor or LiveIn). It is your choice which of the relations to address. </p>
+
+<h2>Requirements</h2>
+
+<p>You need to implement:</p>
+
+<ol>
+<li><p>a system that gets as input a text file with multiple sentences, and returns as output a list of extracted relations together with the sentences the relations were extracted from. (40%) </p></li>
+<li><p>an evaluation program that gets your programs's output and the gold-standard data, and outputs the Precision, Recall and F-1 scores. (10%)</p></li>
+<li><p>You will also submit a report. (50%)</p></li>
+</ol>
+
+<p>Your main grade will be based on the report -- but note that the report will be based on what you actually implemented, and the results you obtained.</p>
+
+<h3>Data</h3>
+
+<p>We provide you with two datasets, <code>TRAIN</code> and <code>DEV</code>. Each set consists of two files:</p>
+
+<ol>
+<li><p>Corpus (<a href="data/Corpus.TRAIN.txt">Corpus.TRAIN.txt</a> / <a href="data/Corpus.DEV.txt">Corpus.DEV.txt</a>) -- These files contain sentences, some of which mention relations you'll need to extract.  Each line is of the format <code>sentence_id&lt;TAB&gt;sentence_text</code>. The sentence ids correspond to sentences in the annotation files (see below).</p></li>
+<li><p>Annotation (<a href="data/TRAIN.annotations">TRAIN.annotations</a> / <a href="data/DEV.annotations">DEV.annotations</a>) -- these files contain the gold-standard annotation of the relations, which should be extracted from the sentences of the corresponding <code>Corpus</code> files. Each line represents a single relation extracted from a sentence. The corresponding sentence is given is brackets for your convenience.  In the file, columns are separated by TABs, while tokens are separated by whitespace.</p></li>
+<li><p>Processed Corpus (<a href="data/Corpus.TRAIN.processed">Corpus.TRAIN.processed</a> / <a href="data/Corpus.DEV.processed">Corpus.DEV.processed</a>) -- these are the Corpus files,
+with lemmas, POS-tags, Named-entity-tags and dependency-tree annotations. The annotations are produced using the <a href="https://spacy.io/">spacy</a> NLP toolkit, using the following script: <a href="data/spc.py">spc.py</a>.</p>
+
+<p>You can use these files directly, or run <code>spacy</code> yourself. Running <code>spacy</code> has some benefits: it
+provides also NP chunks information (which can be inferred from the dependencies, but perhaps easier with the <code>spacy</code> API, see the commented-out
+example in the <a href="data/spc.py">spc.py</a> script), as well as easy access
+to word vectors, and a nice API for handling accessing tags and lemmas information, as well as dependency-tree navigation.</p>
+
+<p>The <code>spacy</code> documentation is available <a href="https://spacy.io/docs/usage/language-processing-pipeline">here</a>. It also lists the POS tag set, Named Entities tag set, and so on.</p>
+
+<p>Spacy is a python package. If you use Java, you can either read the processed file and use it, or use Stanford's <a href="http://nlp.stanford.edu/software/corenlp.shtml">CoreNLP</a> library to process the Corpus files.</p></li>
+</ol>
+
+<p>You can download all the data in a single file: <a href="data.tar.gz">data.tar.gz</a></p>
+
+<p><strong>Additional Resources</strong>
+    You may (but are not required to) also use additional resources such as the <a href="http://paraphrase.org/#/download">paraphrase database</a>, word-vectors like you've used in assignment 3, and <a href="https://wordnet.princeton.edu/">WordNet</a>.
+<!--
+ <strong>In addition,</strong> you are given a set of paraphrases automatically extracted from a news corpus, such as e.g. <code>X killed Y</code>  &harr;  <code>Y was murdered by X</code>. You can either incorporate this resource for automatic use, or use it for manually implementing patterns. The resource can be found here: <a href="DIRT.txt">DIRT.txt</a>.</p>
+
+<p>For those who are curious, the algorithm used to construct this resource is described in this <a href="dirt-paper.pdf">research paper</a>.
+--></p>
+
+<h3>Input and Output formats</h3>
+
+<p>The input to your program could be either in the format of the <code>.processed</code> files we provide, OR of the <code>.txt</code> files we provide. It is your choice.</p>
+
+<p>The outpt should be in the Annotation file format, with the original sentence in brackets being optional.</p>
+
+<h3>Work Cycle</h3>
+
+<p>You should use the training set's "Annotation" file to manually analyze examples of relations, which should be extracted from different sentences. You should use the "Corpus" file of the training set in order to better understand the preprocessed data. Using the analyzed examples, you should devise a method for extracting the selected relation of interest. Note that identifying a relation includes identifying the participating entities, as well as the relation type.</p>
+
+<p>You can use either a rule-based approach, a learning-based approach, or a hybrid approach.
+Note that the training set is quite small, so a learning-based approach could easily overfit.</p>
+
+<p>When developing your system against the training set, keep in mind that the sentences in the training set are just examples, and try to make a system that can generalize beyond the development set.</p>
+
+<p>You should follow the following methodology:</p>
+
+<ol>
+<li>Use the provided training set to develop an initial RE system.</li>
+<li>When done, test its performance for the given dev set. If the results are lower than you would expect based on the system's performance for the training set, you can return to (1) to perform error analysis (see below) over the training set and try to improve the system according to the understanding you gained. Note that the dev set should be used only to give you indication of how the system performs for the sentences, which were not seen before. Using it to analyze how to improve the performance is possible, but note that you may fall into over-fitting (your submitted system will be evaluated on a hidden set).</li>
+<li>After several iterations, you will come up with a configuration of your system, which performs reasonably well both for the development and for the test sets. This will be the configuration which you'll submit for this assignment.</li>
+</ol>
+
+<p>The results of your final system will be further evaluated using a hidden set, which is not published along with the assignment. The results achieved by your system for this blind validation set will account for 10% of your assignment grade. Note that the results of your system for the train and the dev sets, which you obtain as part of the data, will not influence your grade. </p>
+
+<h3>Error analysis</h3>
+
+<p>In order to better understand why your system makes mistakes, it is common to perform error analysis. One of the standard ways, which we suggest you to follow, is randomly sampling a number of recall mistakes and a number of precision mistakes, and manually analyzing them. In our setting, recall mistakes are relations, which your system did not succeed to extract. Precision mistakes are relations extracted by your system, but absent in the gold-standard annotation.  It is useful to try and categorize the mistakes you analyzed into groups, according to the cause of the error. This will help you understand the problem domain better, and may provide hints as to how to improve your system (where to direct your efforts, or which components are needed but missing).</p>
+
+<h3>What to submit</h3>
+
+<p>You will submit two programs:</p>
+
+<p><strong><code>eval file1 file2</code></strong> this program gets as input two files in the "Annotations" format (bracketed sentence is optional), and outputs the precision, recall and F1 scores for each relation category, assuming the first file is the gold-data and the second file is the predicted data.</p>
+
+<p>If you work in Java, this should be run as:
+<code>java -jar eval.jar file1 file2</code></p>
+
+<p>If you work in python, this should be run as:
+<code>python eval.py file1 file2</code></p>
+
+<p>For a relation to be considered as identified correctly, it needs to match the type of the relation and the two entities in their entirety. It also needs to match the sentence number (if a relation appears in sentence A, but you identified it in sentence B, you will still lose recall for not identifying it in sentence A. And, if the relation does not really occur in sentence B, you will lose precision for incorrectly identifying it.)</p>
+
+<p><strong><code>extract file</code></strong> this program gets as input a file, and outputs a file in the Annotation format, containing the extracted relations.</p>
+
+<p>If you work in Java, this should be run as:
+<code>java -jar extract.jar file1 file2</code></p>
+
+<p>If you work in python, this should be run as:
+<code>python extract.py file1 file2</code></p>
+
+<p>The input could be either in the format of the <code>.processed</code> files we provide, OR in the <code>.txt</code> files we provide. It is your choice. If the file is
+in the wrong format, your program should exit gracefully with an appropriate message. You can assume the first character in the <code>.processed</code> file is a <code>#</code>, and the first character in the <code>.txt</code> file is not.</p>
+
+<p>You will also submit a <code>final report</code> file (named <code>report.pdf</code>), as described below.</p>
+
+<h3>Report:</h3>
+
+<p>You should prepare a short report, 
+containing the following:</p>
+
+<ol>
+<li><p>Your name and ID.</p></li>
+<li><p>Short and clear description of your system. If you have a rule-based system, provide a concise description of each rule, the motivation behind that rule, and how the rule is implemented. If the rules have a specific order, explain this part as well. If you used a machine-learning approach, explain what you did (how you modeled the problem, what are features, how the system is trained). If you have used external resources, descrie what they are and how you used them.</p></li>
+<li><p>Error analysis: can you identify the types of some common recall and precision errors in your program? Can you think of the causes for these kinds of errors?</p></li>
+<li><p>Your evaluation results in the following table (you need to include only one of the rows):</p>
+
+<table border=1>
+<tr>
+<td>Relation</td><td> Dev Recall </td><td> Dev Prec </td><td> Dev F1 </td><td> Test Recall </td><td> Test Prec </td><td> Test F1 </td>
+</tr> <tr>
+<td> Work For </td>
+</tr> <tr>
+<td> Live In </td>
+</tr>
+
+
+</table></li>
+</ol>
+
+<p><strong>Pay attention</strong>: Penalty will be given for poorly written report, make it concise, informative and clear.</p>
+
+<h2>Misc</h2>
+
+<!--Submit your code through the [submission system](http://submit.cs.biu.ac.il).-->
+
+<p>All code files as well as the report should include the username and ID of the submitting student(s), in a clear location in one of the first lines.</p>
+
+<p>You can write your code in either Python or Java (or both).</p>
+
+<p>In case you want to use WordNet, the Python NLTK package provides a convenient interface.</p>
+
+<p>The code should be able to run from the commandline, without using Eclipse or any other IDE.</p>
+
+<p>For Java, please submit both the <code>.java</code> source and the compiled <code>.class</code> files (and a <code>jar</code> file).</p>
+
+<p>The code for all assignments should be submitted in a single <code>.zip</code> or <code>.tar.gz</code> file. </p>
+
+<p>Please provide instructions on how to run your code (if special files need to be in certain location, special libraries need to be installed, and so on).
+If your code cannot be run, you will receive a grade of 0.</p>
+
+<p>The <code>README</code> file with the instructions should be in an easy-to-find location, and in a plain text format.</p>
+
+<p>The report should be in a <code>PDF</code> format.</p>

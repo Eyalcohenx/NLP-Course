@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0170a935-0bed-4c5c-9a81-3d9e520d2633" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/vec_similarity.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="504">
+              <caret line="24" column="35" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>73</find>
+      <find>73jo</find>
+      <find>sylvester</find>
+      <find>of</find>
+      <find>mod</find>
+      <find>acl</find>
+      <find>neg</find>
+      <find>prp</find>
+      <find>nmod</find>
+      <find>PRP</find>
+      <find>IN</find>
+      <find>WP$</find>
+      <find>because</find>
+      <find>have</find>
+      <find>shall</find>
+      <find />
+      <find>0.0, &quot;</find>
+      <find>a</find>
+      <find>on</find>
+      <find>it</find>
+      <find>376b</find>
+      <find>relation</find>
+      <find>12-bit</find>
+      <find>.</find>
+      <find>nh</find>
+      <find>be</find>
+      <find>that</find>
+      <find>himself</find>
+      <find>,</find>
+      <find>*********</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/wiki.45k.lines" />
+        <option value="$PROJECT_DIR$/wiki.71k.lemmatized" />
+        <option value="$PROJECT_DIR$/wikipedia.tinysample.trees.lemmatized" />
+        <option value="$PROJECT_DIR$/100k" />
+        <option value="$PROJECT_DIR$/output full corpus.txt" />
+        <option value="$PROJECT_DIR$/vecs_asarray.py" />
+        <option value="$PROJECT_DIR$/draft" />
+        <option value="$PROJECT_DIR$/remove_digits.py" />
+        <option value="$PROJECT_DIR$/submit/top20_1st_order.csv" />
+        <option value="$PROJECT_DIR$/output co-occurence full corpus.txt" />
+        <option value="$PROJECT_DIR$/submit/top20.csv" />
+        <option value="$PROJECT_DIR$/submit/counts_words.txt" />
+        <option value="$PROJECT_DIR$/submit/counts_contexts_dep.txt" />
+        <option value="$PROJECT_DIR$/submit/top20.txt" />
+        <option value="$PROJECT_DIR$/submit/details.txt" />
+        <option value="$PROJECT_DIR$/submit/top20_car_semantic.csv" />
+        <option value="$PROJECT_DIR$/submit/top20_car_topically.csv" />
+        <option value="$PROJECT_DIR$/submit/top20_piano_topically.csv" />
+        <option value="$PROJECT_DIR$/submit/top20_piano_semantic.csv" />
+        <option value="$PROJECT_DIR$/submit/word2vec_top20_piano_semantic.csv" />
+        <option value="$PROJECT_DIR$/submit/top20_word2vec.csv" />
+        <option value="$PROJECT_DIR$/submit/top20_word2vec.txt" />
+        <option value="$PROJECT_DIR$/submit/top20_word2vec_contexts.txt" />
+        <option value="$PROJECT_DIR$/submit/top20_word2vec_1st_order.csv" />
+        <option value="$PROJECT_DIR$/submit/word2vec_top20_piano_topical.csv" />
+        <option value="$PROJECT_DIR$/submit/word2vec_top20_car_topical.csv" />
+        <option value="$PROJECT_DIR$/submit/word2vec_top20_car_semantic.csv" />
+        <option value="$PROJECT_DIR$/co_occurrence_similarity.py" />
+        <option value="$PROJECT_DIR$/vec_similarity.py" />
+        <option value="$PROJECT_DIR$/assignment3/top20_word2vec_contexts.txt" />
+        <option value="$PROJECT_DIR$/assignment3/top20_word2vec_1st_order.csv" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="267" />
+    <option name="y" value="97" />
+    <option name="width" value="1500" />
+    <option name="height" value="940" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="ass3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ass3" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ass3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ass3" type="462c0819:PsiDirectoryNode" />
+              <item name="assignment3" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/vec_similarity.py" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="web.server" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="vec_similarity" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="ass3" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\Eyal\AppData\Local\Programs\Python\Python37\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/vec_similarity.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0170a935-0bed-4c5c-9a81-3d9e520d2633" name="Default Changelist" comment="" />
+      <created>1576766255933</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1576766255933</updated>
+      <workItem from="1576766267050" duration="11213000" />
+      <workItem from="1576961813669" duration="90862000" />
+      <workItem from="1577350146352" duration="34020000" />
+      <workItem from="1577610977811" duration="19245000" />
+      <workItem from="1577778184956" duration="4530000" />
+      <workItem from="1577789914084" duration="17000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="159887000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21782842" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.29978117" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.23762377" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.50875276" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32827735" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32932165" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.2567714" />
+      <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.27211797" />
+      <window_info anchor="right" id="Database" order="4" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/ass3$vec_similarity.coverage" NAME="vec_similarity Coverage Results" MODIFIED="1577778721553" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ass2$vec_similarity.coverage" NAME="co_occurrence_similarity Coverage Results" MODIFIED="1577274361036" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ass3$co_occurrence_similarity.coverage" NAME="vec_similarity Coverage Results" MODIFIED="1577623769577" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wikipedia.sample.trees.lemmatized.100k">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="6118" column="17" selection-start-line="6118" selection-start-column="17" selection-end-line="6118" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wikipedia.sample.trees.lemmatized">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="-625238">
+          <caret line="8902" column="24" selection-start-line="8902" selection-start-column="16" selection-end-line="8902" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/collections/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="653" selection-start-line="653" selection-end-line="653" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wikipedia.sample.trees.lemmatized.1mil">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="9099">
+          <caret line="465" column="41" lean-forward="true" selection-start-line="465" selection-start-column="41" selection-end-line="465" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bow5.contexts.100k">
+      <provider selected="true" editor-type-id="LargeFileEditor" />
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/encodings/cp1255.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deps.words">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state>
+          <caret column="4939" selection-start-column="4939" selection-end-column="4939" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deps.contexts.100k">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="-840" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/submit/top20.tx" />
+    <entry file="file://$PROJECT_DIR$/vecs_asarray.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-12278">
+          <caret line="671" column="22" selection-start-line="671" selection-start-column="22" selection-end-line="671" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wiki.71k.lemmatized">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="6333" column="10" selection-start-line="6333" selection-start-column="8" selection-end-line="6333" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/draft">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3376">
+          <caret line="259" selection-start-line="259" selection-end-line="259" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output co-occurence full corpus.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-11067">
+          <caret line="13" column="16" lean-forward="true" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/word2vec_outputs">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/submit/details.txt" />
+    <entry file="file://$PROJECT_DIR$/submit/top20_1st_order.csv" />
+    <entry file="file://$PROJECT_DIR$/submit/top20_car_topically.csv" />
+    <entry file="file://$PROJECT_DIR$/submit/top20_car_semantic.csv" />
+    <entry file="file://$PROJECT_DIR$/submit/top20_piano_semantic.csv" />
+    <entry file="file://$PROJECT_DIR$/submit/top20_piano_topically.csv" />
+    <entry file="file://$PROJECT_DIR$/submit/top20.csv" />
+    <entry file="file://$PROJECT_DIR$/submit/counts_words.txt" />
+    <entry file="file://$PROJECT_DIR$/submit/counts_contexts_dep.txt" />
+    <entry file="file://$PROJECT_DIR$/submit/top20.txt" />
+    <entry file="file://$PROJECT_DIR$/submit/top20_word2vec.csv" />
+    <entry file="file://$PROJECT_DIR$/submit/top20_word2vec_1st_order.csv___jb_tmp___" />
+    <entry file="file://$PROJECT_DIR$/submit/top20_word2vec_1st_order.csv___jb_old___" />
+    <entry file="file://$PROJECT_DIR$/submit/top20_word2vec_1st_order.csv" />
+    <entry file="file://$PROJECT_DIR$/submit/top20_word2vec_contexts.txt" />
+    <entry file="file://$PROJECT_DIR$/submit/word2vec_top20_piano_semantic.csv" />
+    <entry file="file://$PROJECT_DIR$/submit/word2vec_top20_piano_topical.csv" />
+    <entry file="file://$PROJECT_DIR$/submit/word2vec_top20_car_semantic.csv" />
+    <entry file="file://$PROJECT_DIR$/submit/word2vec_top20_car_topical.csv" />
+    <entry file="file://$PROJECT_DIR$/submit/top20_word2vec.txt" />
+    <entry file="file://$PROJECT_DIR$/remove_digits.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="847">
+          <caret line="61" column="56" selection-start-line="61" selection-start-column="56" selection-end-line="61" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/co_occurrence_similarity.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="824">
+          <caret line="364" selection-start-line="364" selection-end-line="364" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignment3/co_occurrence_similarity.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="364" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignment3/vec_similarity.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignment3/counts_contexts_dep.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignment3/counts_words.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignment3/details.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignment3/README.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignment3/top20.csv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="-3360" />
+      </provider>
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignment3/top20.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignment3/top20_word2vec.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignment3/top20_1st_order.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignment3/top20_word2vec_contexts.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="257" column="24" lean-forward="true" selection-start-line="257" selection-start-column="24" selection-end-line="257" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignment3/top20_word2vec.csv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state>
+          <caret column="7" lean-forward="true" selection-end-line="1" />
+        </state>
+      </provider>
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignment3/top20_word2vec_1st_order.csv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="174">
+          <caret line="244" column="93" selection-start-line="244" selection-start-column="93" selection-end-line="244" selection-end-column="93" />
+        </state>
+      </provider>
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vec_similarity.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="24" column="35" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

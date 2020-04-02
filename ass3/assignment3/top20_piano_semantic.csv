@@ -1,0 +1,21 @@
+,window,,sentence,,dependency
+1,violin,1, violin,1, violin
+1,cello,1, cello,1, cello
+1,clarinet,1, clarinet,1, flute
+0,solo,1, flute,1, guitar
+0,sonata,0, concerto,1, clarinet
+1,flute,0, sonata,0, bass
+0,concerto,1, trumpet,1, viola
+0,op,1, viola,0, keyboard
+0,keyboard,0, percussion,0, horn
+0,string,1, saxophone,1, drum
+0,bass,0, op,1, organ
+1,trumpet,0, orchestra,0, percussion
+1,guitar,1, harp,0, orchestra
+1,saxophone,0, soloist,1, instrument
+1,viola,0, quartet,1, trumpet
+1,organ,0, ensemble,0, music
+0,horn,1, tenor,1, saxophone
+0,lesson,1, instrument,1, harp
+0,classical,0, bass,0, solo
+0,recital,0, soprano,0, choir

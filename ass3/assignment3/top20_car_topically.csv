@@ -1,0 +1,21 @@
+,window,,sentence,,dependency
+1,truck,1, toyota,1, vehicle
+1,vehicle,1, driver,1, truck
+1,motorcycle,1, chassis,1, motorcycle
+1,motor,1, racing,1, automobile
+1,racing,1, chevrolet,1, train
+1,automobile,1, nascar,1, bus
+1,bicycle,1, ferrari,1, boat
+1,driver,1, bmw,1, motor
+1,bus,1, truck,1, aircraft
+0,rail,1, axle,1, bicycle
+1,boat,1, motor,1, engine
+1,train,1, gt,1, racing
+1,race,1, v8,1, driver
+1,ford,1, wheel,0, locomotive
+1,bike,1, f1,0, horse
+1,crash,1, formula,1, ford
+1,auto,1, lap,1, van
+0,freight,1, ford,1, formula
+1,passenger,1, porsche,0, ship
+1,formula,1, auto,1, auto

@@ -1,0 +1,259 @@
+import numpy as np
+from numpy import dot
+from numpy.linalg import norm
+from bisect import insort
+
+from vecs_asarray import bow5_car_vec
+
+similarities_car = [(0.0, "$JUNK$")] * 100
+similarities_bus = [(0.0, "$JUNK$")] * 100
+similarities_hospital = [(0.0, "$JUNK$")] * 100
+similarities_hotel = [(0.0, "$JUNK$")] * 100
+similarities_gun = [(0.0, "$JUNK$")] * 100
+similarities_bomb = [(0.0, "$JUNK$")] * 100
+similarities_horse = [(0.0, "$JUNK$")] * 100
+similarities_fox = [(0.0, "$JUNK$")] * 100
+similarities_table = [(0.0, "$JUNK$")] * 100
+similarities_bowl = [(0.0, "$JUNK$")] * 100
+similarities_guitar = [(0.0, "$JUNK$")] * 100
+similarities_piano = [(0.0, "$JUNK$")] * 100
+
+
+def cos(x, y):
+    return dot(x, y) / (norm(x) * norm(y))
+
+
+with open("bow5.contexts.100k") as f:
+    counter = 0
+    for line in f:
+        splitted = line.split()
+        vec = np.asarray(splitted[1:]).astype(np.float)
+        insort(similarities_car, (cos(bow5_car_vec, vec), splitted[0]))
+        if counter % 1000 == 0:
+            similarities_car = similarities_car[-100:]
+    similarities_car = similarities_car[-100:]
+    similarities_car.sort(reverse=True)
+
+print(similarities_car)
+
+
+2st order for car:
+['aircraft', 'system', 'ship', 'boat', 'vehicle', 'traffic', 'model', 'piston', 'it', 'service', 'sport', 'island', 'film', 'side', 'unit', 'public', 'gas', 'stadium', 'game', 'hamlet']
+['truck', 'parking', 'freight', 'interurban', 'powered', 'motor', 'locomotive', 'rover', 'rear', 'load', 'wheel', 'p4', 'unused', 'adac', 'procar', 'passenger', 'exit', 'sd1', 'volt', 'replacement']
+['turbocharged', 'dealer', 'pure-sitting', 'non-vr', 'factory', 'stolen', 'championship', 'motor', 'first', 'market', 'exclusive', 'powered', 'used', 'aircraft', 'rental', 'project', 'racing', 'other', 'light', 'armored']
+
+1st order for car:
+[("'30s", 'compmod', 'FROM-ME'), ('turbocharged', 'amod', 'FROM-ME'), ('parking', 'compmod', 'TO-ME'), ('accomplice', 'adpobj', 'TO-ME', 'adpmod', 'in'), ('stolen', 'amod', 'FROM-ME'), ('accomplice', 'adpobj', 'TO-ME'), ('w196', 'compmod', 'FROM-ME'), ('couple', 'conj', 'TO-ME'), ('assemble', 'adpobj', 'TO-ME', 'adpmod', 'in'), ('accessible', 'adpobj', 'TO-ME', 'adpmod', 'by'), ('loan', 'nsubjpass', 'TO-ME'), ('mercedes', 'compmod', 'FROM-ME'), ('lot', 'adpobj', 'FROM-ME', 'adpmod', 'with'), ('powered', 'amod', 'FROM-ME'), ('return', 'dobj', 'TO-ME', 'adpmod', 'from'), ('explodes', 'compmod', 'TO-ME'), ('dealer', 'compmod', 'TO-ME'), ('mode', 'conj', 'FROM-ME'), ('accident', 'compmod', 'TO-ME'), ('trailer', 'compmod', 'TO-ME')]
+['rover', 'replacement', 'door', 'fit', 'motor', 'bomb', 'passenger', 'drive', 'sell', 'space', 'race', 'train', 'model', 'street', 'finish', 'police', 'park', 'championship', 'side', 'control']
+["'30s", 'turbocharged', 'pure-sitting', 'non-vr', 'stolen', 'vinnie', 'powered', 'used', 'rental', 'touring', 'armored', 'dealer', 'dining', 'accessible', 'accident', 'eddie', 'bomb', 'cable', 'motor', 'parking']
+
+2st order for bus:
+['train', 'terminal', 'school', 'line', 'flight', 'operator', 'emergency', 'service', 'road', 'it', 'reuse', 'army', 'point', 'community', 'sketch', 'clearing', 'railway', 'town', 'troop', 'quiapo']
+['passenger', 'terminal', 'airport', 'sb', 'transit', 'mead', 'operates', 'outbound', 'buona', 'clifton', 'inbound', 'trip', 'shelter', 'station', 'a2', 'vista', 'a1', 'route', 'unsuccessfully', 'journey']
+['terminal', 'fayyaz', 'route', 'shaheed', 'vista', 'line', 'hijack', 'train', 'service', 'wrta', 'companywestbus', 'ambica', 'gagrage', 'long-distance', 'double-decker', 'dual-mode', 'mofussil', 'station', 'operator', 'operating']
+
+1st order for bus:
+[('companywestbus', 'compmod', 'TO-ME'), ('post', 'adpobj', 'FROM-ME', 'adpmod', 'near'), ('rid', 'rcmod', 'FROM-ME'), ('gagrage', 'compmod', 'TO-ME'), ('shakotan-otaru', 'amod', 'FROM-ME'), ('jail', 'compmod', 'FROM-ME'), ('enviro500', 'compmod', 'FROM-ME'), ('2008-2009', 'amod', 'FROM-ME'), ('1201-1203', 'amod', 'FROM-ME'), ('double-decker', 'amod', 'FROM-ME'), ('northwest', 'advmod', 'FROM-ME'), ('shelter', 'compmod', 'TO-ME'), ('terminal', 'adpobj', 'TO-ME', 'adpmod', 'for'), ('facilitate', 'nsubj', 'TO-ME'), ('lunch', 'adpobj', 'FROM-ME'), ('lunch', 'adpobj', 'FROM-ME', 'adpmod', 'after'), ('blow', 'adpobj', 'TO-ME', 'adpmod', 'in'), ('long-distance', 'compmod', 'FROM-ME'), ('express', 'compmod', 'FROM-ME'), ('terminal', 'adpobj', 'TO-ME')]
+['sb', 'outbound', 'trondheim', 'shelter', 'transit', 'a1', 'unsuccessfully', 'terminal', 'rain', 'route', 'passenger', 'journey', 'trip', 'airport', 'campus', 'wind', 'injure', 'connection', 'stop', 'operate']
+['companywestbus', 'ambica', 'shaheed', 'fayyaz', 'gagrage', 'wrta', 'double-decker', 'kowloon', 'mofussil', 'herecardiff', 'dual-mode', 'buona', 'ksrtc', 'cta', 'greyhound', 'walking', 'traumatic', 'long-distance', 'vista', 'hijack']
+
+2st order for hospital:
+['school', 'house', 'church', 'site', 'park', 'phone', 'palace', 'university', 'city', 'road', 'london', 'territory', 'u', 'camp', 'region', 'game', 'company', 'club', 'canada', 'department']
+['trinity', 'medical', 'oncology', 'singh', 'ganga', 'fundamental', 'tech', 'tamil', 'veterinary', 'maharashtra', 'calcutta', 'rao', 'vidyapeeth', 'nagar', 'apothecary', 'mercantile', 'clinic', 'roy', 'punjab', 'shankar']
+['psychiatric', 'repatriation', 'adventist', 'lázaro', 'alijn', '300-bed', 'specialist', 'bethesda', 'convalescent', 'community', 'zion', 'presbyterian', 'aizawl', 'pioneering', 'tweed', 'covenant', 'school', 'anchorage', 'heidelberg', 'referral']
+
+1st order for hospital:
+[('admission', 'compmod', 'TO-ME'), ('patient', 'adpobj', 'TO-ME', 'adpmod', 'of'), ('four-ward', 'compmod', 'FROM-ME'), ('va', 'compmod', 'FROM-ME'), ('forbes', 'conj', 'TO-ME'), ('healthgrades', 'adpobj', 'FROM-ME'), ('healthgrades', 'adpobj', 'FROM-ME', 'adpmod', 'by'), ('establishing', 'adpobj', 'TO-ME', 'adpmod', 'of'), ('establishing', 'adpobj', 'TO-ME'), ('300-bed', 'amod', 'FROM-ME'), ('addenbrooke', 'poss', 'FROM-ME'), ('pioneering', 'amod', 'FROM-ME'), ('doctor', 'adpobj', 'TO-ME', 'adpmod', 'at'), ('home', 'appos', 'TO-ME'), ('psychiatric', 'amod', 'FROM-ME'), ('hospital', 'appos', 'TO-ME'), ('couple', 'adpobj', 'TO-ME', 'adpmod', 'from'), ('first', 'nsubj', 'TO-ME'), ('covenant', 'compmod', 'FROM-ME'), ('rush', 'adpobj', 'TO-ME', 'adpmod', 'to')]
+['patient', 'health', 'care', 'medical', 'doctor', 'construction', 'institution', 'tarun', 'tapan', 'tarapur', 'tata', 'nadu', 'tamil', '-', 'open', 'singh', 'locate', 'bring', 'board', 'child']
+['addenbrooke', 'alijn', 'convalescent', 'four-ward', '300-bed', 'lázaro', 'steevens', 'galax', 'psychiatric', 'thunderstorm', 'pioneering', 'irrua', 'aizawl', 'repatriation', 'bethesda', 'lunatic', 'referral', 'zion', 'tweed', 'va']
+
+2st order for hotel:
+['hold', 'university', 'vialls', 'church', 'airfield', 'level', 'live', 'club', 'arrive', 'territory', 'bear', 'hall', 'area', 'prevail', 'place', 'dramático', 'canada', 'year', 'spotorno', 'promotion']
+['wain', 'tavern', 'stafford', 'provincial', 'foot', 'empire', 'wale', 'operator', 'casino', 'ramada', 'itinerary', 'teamwork', 'inn', 'motorcoach', 'luxury', 'prince', 'hoskins', 'roadies', 'alcohol-free', 'street']
+['ibis', 'roberval', 'earhart', 'murecine', 'haunted', 'autry', 'strater', 'galvez', '5-star', 'extended-stay', 'temperance', 'bedroom', 'sector', 'babylon', 'luxury', '62', 'livesin', 'amelia', 'hilton', 'indigo']
+
+1st order for hotel:
+[('casino', 'conj', 'FROM-ME'), ('galvez', 'compmod', 'TO-ME'), ('dallas', 'compmod', 'TO-ME'), ('supper', 'adpobj', 'TO-ME', 'adpmod', 'at'), ('supper', 'adpobj', 'TO-ME'), ('middlesbrough', 'appos', 'FROM-ME'), ('ibis', 'amod', 'FROM-ME'), ('verdict', 'appos', 'FROM-ME'), ('ac', 'amod', 'FROM-ME'), ('marriott', 'adpobj', 'FROM-ME'), ('marriott', 'adpobj', 'FROM-ME', 'adpmod', 'by'), ('drift', 'adpobj', 'TO-ME', 'adpmod', 'between'), ('doorman', 'adpobj', 'TO-ME', 'adpmod', 'at'), ('5-star', 'amod', 'FROM-ME'), ('neutral', 'compmod', 'FROM-ME'), ('autry', 'compmod', 'FROM-ME'), ('lobby', 'compmod', 'TO-ME'), ('temperance', 'compmod', 'FROM-ME'), ("'the", 'num', 'FROM-ME'), ('roberval', 'compmod', 'TO-ME')]
+['wain', 'temperance', 'tavern', 'middlesbrough', 'stafford', 'casino', 'pink', 'luxury', 'slot', 'motorcoach', 'metre', 'temporary', 'provincial', 'room', 'operator', 'airline', 'foot', 'wale', 'sit', 'chain']
+['galvez', 'ibis', '2in', 'roberval', '5-star', 'murecine', 'wain', 'extended-stay', 'strater', 'temperance', 'tunku', 'earhart', 'haunted', 'autry', 'indigo', 'hilton', 'lobby', 'babylon', 'amelia', 'luxury']
+
+2st order for gun:
+['weapon', 'grenade', 'school', 'structure', 'building', 'fire', 'ship', 'skin', 'member', 'editing', 'machine', 'crew', 'thousand', 'them', 'code', 'steel', 'c', 'seat', 'cannon', 'it']
+['artillery', 'pistol', 'stunbolt', 'stunner', 'firearm', 'weapon', 'arm', 'rifle', 'bolt', 'battery', '167', 'variously', 'stunning', 'cannon', 'dorsal', 'howitzer', 'machine', 'grip', 'ammunition', 'concentrated']
+['machine', 'submachine', 'akms', 'shield', 'ventral', 'steel', 'anti-tank', 'brig', 'emplacement', 'stunbolt', 'gatling', 'sporadic', 'artillery', 'riot', 'heavy', 'remington', 'mg-42', 'salvage', 'bunker', 'maker']
+
+1st order for gun:
+[('rifle', 'appos', 'FROM-ME'), ('stunbolt', 'compmod', 'FROM-ME'), ('stunner', 'conj', 'FROM-ME'), ('snout', 'adpobj', 'TO-ME', 'adpmod', 'with'), ('accuracy', 'adpobj', 'TO-ME', 'adpmod', 'on'), ('commissioner', 'nsubjpass', 'FROM-ME'), ('gatling', 'compmod', 'FROM-ME'), ('remington', 'compmod', 'FROM-ME'), ('outfit', 'adpobj', 'TO-ME', 'adpmod', 'with'), ('cannon', 'appos', 'FROM-ME'), ('emplacement', 'compmod', 'TO-ME'), ('battery', 'adpobj', 'TO-ME', 'adpmod', 'of'), ('brig', 'compmod', 'TO-ME'), ('gun', 'conj', 'FROM-ME'), ('500', 'adpobj', 'TO-ME', 'adpmod', 'of'), ('500', 'adpobj', 'TO-ME'), ('stun', 'compmod', 'FROM-ME'), ('snout', 'adpobj', 'TO-ME'), ('stainless', 'amod', 'FROM-ME'), ('riot', 'compmod', 'FROM-ME')]
+['bolt', 'pistol', 'machine', 'artillery', 'battery', 'rifle', 'watt', 'fix', 'franklin', 'arm', 'weapon', 'fire', 'ship', 'carry', 'device', 'lack', 'capture', 'six', 'once', 'position']
+['stunbolt', 'gatling', 'remington', 'sporadic', 'emplacement', 'screener', 'submachine', 'mg-42', 'akms', 'dt', 'brig', 'shun', 'anti-tank', 'mahdi', 'stainless', 'mounted', 'stun', 'dorsal', 'bb', 'ventral']
+
+2st order for bomb:
+['otaku', 'show', 'force', 'accident', 'detonate', 'sink', 'found', 'crew', 'defence', 'crash', 'swordmaking', 'device', 'indian', 'conflict', 'know', 'prefect', 'assemble', 'history', 'weapon', 'win']
+['in-flight', 'glide', 'rack', 'bombing', 'fuse', 'navigation', 'maintenance', 'injure', 'explode', 'ground', 'analysis', 'hour', 'aid', 'aircraft', 'academic', 'bomber', 'aerial', '01', 'crew', 'increase']
+['attack', 'booby-trap', 'ira', 'against', 'redline', 'aimer', 'ballistics', 'explodes', 'launcher', 'incendiary', 'their', 'explode', 'conventional', 'force', 'gaddafi', 'unexploded', 'nuclear', 'during', 'operation', 'near']
+
+1st order for bomb:
+[('pipe', 'amod', 'FROM-ME'), ('aimer', 'compmod', 'TO-ME'), ('explode', 'compmod', 'TO-ME'), ('detonate', 'nsubjpass', 'TO-ME'), ('boldak', 'adpobj', 'FROM-ME'), ('boldak', 'adpobj', 'FROM-ME', 'adpmod', 'near'), ('booby-trap', 'compmod', 'FROM-ME'), ('adjabiya', 'adpobj', 'FROM-ME'), ('adjabiya', 'adpobj', 'FROM-ME', 'adpmod', 'around'), ('thrown', 'compmod', 'TO-ME'), ('adrianople', 'nsubjpass', 'FROM-ME'), ('bulgaria', 'adpobj', 'FROM-ME', 'adpmod', 'by'), ('petrol', 'dobj', 'TO-ME'), ('wave', 'adpobj', 'FROM-ME', 'adpmod', 'in'), ('ally', 'adpobj', 'FROM-ME', 'adpmod', 'by'), ('airfield', 'adpobj', 'FROM-ME', 'adpmod', 'on'), ('load', 'appos', 'TO-ME'), ('plant', 'partmod', 'FROM-ME'), ('targeting', 'adpobj', 'TO-ME', 'adpmod', 'of'), ('incite', 'nsubj', 'TO-ME')]
+['in-flight', 'neutron', 'explode', 'glide', 'rack', 'fuse', 'injure', 'bomber', 'navigation', 'bombing', 'atomic', 'aerial', 'maintenance', 'nuclear', 'aid', 'kill', 'analysis', 'damage', 'academic', 'ground']
+['ballistics', 'aimer', 'redline', 'explodes', 'booby-trap', 'incendiary', 'unexploded', 'launcher', 'gaddafi', 'thrown', 'explode', 'bombardier', 'atomic', 'petrol', 'refinery', 'ira', 'rack', 'disposal', 'hydrogen', 'neutron']
+
+2st order for horse:
+['army', 'men', 'bridge', 'group', 'it', 'aweti', 'game', 'table', 'car', 'lucifer', 'wwc', 'text', 'saladin', 'sport', 'veteran', 'life', 'platform', 'him', 'antigonus', 'ship']
+['foal', 'eligibility', 'specify', 'fee', 'nominate', 'proper', 'birth', 'owner', 'competition', 'single-breed', 'additional', 'pay', 'cutting', 'class', 'enter', 'grow', 'either', 'young', 'enthusiast', 'rid']
+['dung', 'fallow', 'hired', 'fallow-colored', 'deposited', 'cutting', 'trucking', 'andalusian', 'pony', 'neither', 'trojan', 'charley', 'llull', 'troop', 'cross', 'rack', 'trough', 'crazy', 'sport', 'carriage']
+
+1st order for horse:
+[('pony', 'conj', 'FROM-ME'), ('dung', 'compmod', 'TO-ME'), ('abduct', 'infmod', 'FROM-ME'), ('fallow-colored', 'amod', 'FROM-ME'), ('fallow', 'amod', 'FROM-ME'), ('impale', 'conj', 'TO-ME'), ('knock', 'adpobj', 'TO-ME', 'adpmod', 'by'), ('flee', 'adpobj', 'TO-ME', 'adpmod', 'on'), ('hired', 'amod', 'FROM-ME'), ('brave', 'nsubj', 'TO-ME'), ('tercio', 'adpobj', 'FROM-ME'), ('tercio', 'adpobj', 'FROM-ME', 'adpmod', 'for'), ('entrance', 'dep', 'FROM-ME'), ('pay', 'adpobj', 'TO-ME', 'adpmod', 'a'), ('trough', 'compmod', 'TO-ME'), ('curry', 'dobj', 'TO-ME'), ('animal', 'dep', 'TO-ME'), ('half', 'poss', 'TO-ME'), ('slaughter', 'compmod', 'TO-ME'), ('ride', 'dobj', 'TO-ME')]
+['pony', 'foal', 'cutting', 'eligibility', 'cent', 'specify', 'rid', 'alias', 'fee', 'proper', 'rider', 'nominate', 'symbol', 'birth', 'owner', 'competition', 'animal', 'pay', 'additional', 'grow']
+['deposited', 'fallow-colored', 'fallow', 'hired', 'llull', 'cutting', 'charley', 'trucking', 'trojan', 'andalusian', 'dung', 'atv', 'pony', 'rack', 'crazy', 'trough', 'larry', 'trainer', 'slaughter', 'carriage']
+
+2st order for fox:
+['television', 'news', 'channel', 'bbc', 'tigrerra', 'museum', 'abc', 'dog', 'c', 'bros', 'hollywood', 'united', 'great', 'ii', 'cbs', 'nbc', 'eklutna', 'meta', 'sample', 'b']
+['schytt', 'bergie', 'deposited', 'publick', 'dung', 'farr', 'ravine', '1758', '1762', 'present-day', 'hill', 'avenue', 'cbs', 'animation', 'disney', 'creek', 'extend', 'dreamworks', 'recently-fired', 'neuheisel']
+['pedersen', 'footy', 'television', 'onward', 'kohn', 'slater', 'radio', 'comedy', 'sport', 'silent', 'star', 'sitcom', 'denounce', 'animation', 'agresta', 'correspondent', 'until', 'network', 'broadcaster', 'tv']
+
+1st order for fox:
+[('broadcasting', 'adpobj', 'TO-ME', 'adpmod', 'on'), ('onward', 'compmod', 'TO-ME'), ('hancock', 'conj', 'TO-ME'), ('pilot', 'dobj', 'TO-ME'), ('broadcasting', 'adpobj', 'TO-ME'), ('debut', 'rcmod', 'FROM-ME'), ('dancer', 'compmod', 'FROM-ME'), ('footy', 'compmod', 'TO-ME'), ('denounce', 'nsubj', 'TO-ME'), ('hoover', 'compmod', 'TO-ME'), ('license', 'adpobj', 'TO-ME', 'adpmod', 'by'), ('carter', 'conj', 'FROM-ME'), ('sitcom', 'compmod', 'TO-ME'), ('lane', 'compmod', 'FROM-ME'), ('animation', 'conj', 'TO-ME'), ('series', 'adpobj', 'TO-ME', 'adpmod', 'on'), ('training', 'adpobj', 'TO-ME', 'adpmod', 'with'), ('carol', 'compmod', 'FROM-ME'), ('comedy', 'compmod', 'TO-ME'), ('hour', 'compmod', 'TO-ME')]
+['schytt', 'bergie', 'dung', 'animation', 'nfl', 'spirit', 'comedy', 'occasion', '20th', 'pilot', 'sport', 'news', 'host', '1988', 'channel', 'episode', 'hill', 'charles', 'radio', 'master']
+['footy', 'agresta', 'muskrat', 'kohn', 'onward', 'pedersen', 'slater', 'hancock', 'correspondent', 'denounce', 'jam', 'sitcom', 'silent', 'broadcaster', 'robin', 'animation', 'carol', 'venture', 'dancer', 'broadcasting']
+
+2st order for table:
+['article', 'park', 'area', 'time', 'page', 'movie', 'fleece', 'reference', 'order', 'water', 'resource', 'game', 'match', 'discussion', 'action', 'information', 'airport', 'paper', 'motorsport', 'transportation']
+['ktv', 'sauna', 'gym', 'etiquette', 'spome', 'team17', 'wolfenbuttel', 'bibliothek', 'tamepere', 'pinball', 'indoor', 'badminton', 'tennis', 'simulation', 'library', 'pc', 'laundry', 'server', 'egerton', 'multi-purpose']
+['routing', 'tennis', 'delegate', 'noguchi', 'machine', 'undisturbed', 'picnic', 'praying', 'calculated', 'bundist', 'sortable', 'decompression', 'markup', 'bedside', 'milling', 'excel', 'round', 'server', 'announcer', 'player']
+
+1st order for table:
+[('routing', 'compmod', 'FROM-ME'), ('srt', 'dep', 'FROM-ME'), ('wolfenbuttel', 'compmod', 'FROM-ME'), ('egg', 'adpobj', 'TO-ME', 'adpmod', 'against'), ('ruling', 'adpobj', 'FROM-ME', 'adpmod', 'after'), ('knock', 'adpobj', 'TO-ME', 'adpmod', 'into'), ('announcer', 'compmod', 'FROM-ME'), ('praying', 'compmod', 'FROM-ME'), ('context', 'adpobj', 'TO-ME', 'adpmod', 'to'), ('article', 'adpobj', 'TO-ME', 'adpmod', 'than'), ('milling', 'compmod', 'FROM-ME'), ('snowglobe', 'adpobj', 'TO-ME', 'adpmod', 'from'), ('tilly', 'poss', 'FROM-ME'), ('snowglobe', 'adpobj', 'TO-ME'), ('badminton', 'conj', 'TO-ME'), ('picnic', 'amod', 'FROM-ME'), ('server', 'compmod', 'FROM-ME'), ('decompression', 'compmod', 'FROM-ME'), ('egg', 'adpobj', 'TO-ME'), ('everything', 'adpobj', 'TO-ME', 'adpmod', 'on')]
+['pinball', 'tennis', 'server', 'chair', 'library', 'motion', 'upper', 'watch', 'let', 'creation', 'seat', 'host', 'hall', 'round', 'text', 'lake', 'provide', 'room', 'history', 'last']
+['bundist', 'wolfenbuttel', 'milling', 'noguchi', 'candleholders', 'undisturbed', 'badminton', 'decompression', 'praying', 'calculated', 'sortable', 'picnic', 'routing', 'bedside', 'markup', 'tennis', 'correlation', 'announcer', 'analogous', 'excel']
+
+2st order for bowl:
+['super', 'league', 'obras', '1696', 'season', 'event', 'appear', 'cup', 'championship', 'house', 'picture', 're-enter', 'plantation', 'round', 'classic', 'white-only', 'october', 'score', 'youth', 'come']
+['dipper', 'bowler', 'toss', 'yorker', 'swing', 'deliberately', 'normally', 'ball', 'seibu', 'kamurocho', 'kabukichō', 'kabukicho', 'ichiban-kai', '歌舞伎町一番街', 'kamurochō', 'tenkaichidōri', '神室町天下一通り', 'kamuro', 'shunjiku', 'quijote']
+['mach', 'xxxvi', 'xliv', 'all-american', 'outback', 'shunjiku', 'pro', 'poinsettia', 'milano', 'classic', 'super', 'sugar', 'budget', 'cotton', '1991', 'iv', 'deliberately', 'alley', 'league', 'bread']
+
+1st order for bowl:
+[('bread', 'compmod', 'FROM-ME'), ('yorker', 'adpobj', 'FROM-ME', 'adpmod', 'a'), ('sodomize', 'dobj', 'TO-ME'), ('oatmeal', 'adpobj', 'FROM-ME'), ('oatmeal', 'adpobj', 'FROM-ME', 'adpmod', 'of'), ('conduct', 'appos', 'FROM-ME'), ('outback', 'compmod', 'FROM-ME'), ('tremlett', 'nsubj', 'FROM-ME'), ('back', 'parataxis', 'FROM-ME'), ('tub', 'appos', 'FROM-ME'), ('shunjiku', 'compmod', 'FROM-ME'), ('visitor', 'nsubjpass', 'FROM-ME'), ('209', 'adpobj', 'FROM-ME'), ('209', 'adpobj', 'FROM-ME', 'adpmod', 'for'), ('xxxvi', 'compmod', 'TO-ME'), ('nominate', 'adpobj', 'TO-ME', 'adpmod', 'to'), ('select', 'adpobj', 'TO-ME', 'adpmod', 'to'), ('sense', 'advcl', 'TO-ME'), ('toilet', 'compmod', 'FROM-ME'), ('xliv', 'compmod', 'TO-ME')]
+['dipper', 'kamurocho', 'kabukicho', 'bowler', 'yorker', 'toss', 'super', 'deliberately', 'portal', 'rename', 'invitation', 'wicket', 'nfl', 'swing', 'pro', 'sugar', 'ball', 'snow', 'theater', 'tennis']
+['xxxvi', 'sauna', 'sodomize', 'outback', 'xliv', 'shunjiku', 'milano', 'poinsettia', 'mach', 'three-time', 'all-american', 'super', 'deliberately', 'alley', 'bread', 'armour', 'pro', 'sugar', 'cotton', 'toilet']
+
+2st order for guitar:
+['bass', 'drum', 'piano', 'string', 'line', 'bandoneon', 'cello', 'telebanc', 'lavalys', 'novel', 'vaux', 'editor', 'mercantile', 'trafficking', 'accordion', 'shareholding', 'gold', 'clichés', 'player', 'season']
+['ibanez', 'ginsburg', 'esp', 'bass', 'keyboard', 'revolving', 'martel', 'tambourine', 'lamothe', 'piano', 'pelletier', 'endorse', 'vocal', 'kip', 'hanrahan', 'bandoneon', 'adventurous', 'fuga', 'sex-tet', 'quintet']
+['bass', 'riff', 'ibanez', 'solo', 'strident', 'dissonant', 'fernandes', 'piano', 'esp', 'play', 'synth', 'four-string', 'electric', 'harp', 'endorse', 'pelletier', 'vintage', 'ukulele', 'guitarist', 'concerto']
+
+1st order for guitar:
+[('iterson', 'appos', 'TO-ME'), ('hunter', 'poss', 'TO-ME'), ('four-string', 'amod', 'FROM-ME'), ('ibanez', 'compmod', 'FROM-ME'), ('esp', 'compmod', 'FROM-ME'), ('popularity', 'adpobj', 'TO-ME', 'adpmod', 'of'), ('ukulele', 'conj', 'FROM-ME'), ('vocal', 'appos', 'TO-ME'), ('shrout', 'compmod', 'FROM-ME'), ('hide', 'poss', 'FROM-ME'), ('fernandes', 'compmod', 'FROM-ME'), ('competent', 'adpobj', 'TO-ME', 'adpmod', 'on'), ('competent', 'adpobj', 'TO-ME'), ('synthesizer', 'conj', 'FROM-ME'), ('pelletier', 'adpobj', 'TO-ME', 'adpmod', 'on'), ('pelletier', 'adpobj', 'TO-ME'), ('gift', 'adpobj', 'TO-ME', 'adpmod', 'with'), ('amarnath', 'adpobj', 'TO-ME'), ('kyle', 'adpobj', 'TO-ME', 'adpmod', 'on'), ('auditionee', 'dep', 'TO-ME')]
+['ibanez', 'ginsburg', 'esp', 'melodic', 'keyboard', 'bass', 'quintet', 'piano', 'vocal', 'drum', 'endorse', 'orchestra', 'acquisition', 'recording', 'david', 'switch', 'electric', 'anderson', 'play', 'label']
+['iterson', 'four-string', 'ibanez', 'dissonant', 'shrout', 'fernandes', 'strident', 'esp', 'overuse', 'pelletier', 'synth', 'riff', 'vintage', 'lowe', 'harp', 'concerto', 'henderson', 'bass', 'rhythm', 'acoustic']
+
+2st order for piano:
+['bass', 'guitar', 'keyboard', 'vocal', 'bandoneon', 'drum', 'pulikkal', 'hop', 'line', 'structure', 'music', 'accordance', 'orchestra', 'mandrel', 'solo', 'culture', 'bluegill', 'data', 'veena', 'fusion']
+['guitar', 'revolving', 'martel', 'tambourine', 'lamothe', 'cello', 'bass', 'pelletier', 'keyboard', 'institutionalize', 'marilyn', 'recording', 'vocal', 'kip', 'hanrahan', 'bandoneon', 'adventurous', 'fuga', 'sex-tet', 'gabriel']
+['viennese', 'player', 'keyboard', 'accompaniment', 'guitar', 'bass', 'shit', 'shuffle', 'electric', 'music', 'jazz', 'arrangement', 'instrument', 'solo', 'harmonica', 'pelletier', 'pelican', 'performance', "'rosco", 'normal']
+
+1st order for piano:
+[('aid', 'amod', 'FROM-ME'), ('bagatelle', 'adpobj', 'TO-ME', 'adpmod', 'for'), ('bagatelle', 'adpobj', 'TO-ME'), ('percussion', 'conj', 'TO-ME'), ('viennese', 'amod', 'FROM-ME'), ('prowess', 'adpobj', 'TO-ME', 'adpmod', 'on'), ('prowess', 'adpobj', 'TO-ME'), ('hayrapetian', 'appos', 'TO-ME'), ('accompaniment', 'compmod', 'TO-ME'), ('shuffle', 'compmod', 'TO-ME'), ('cello', 'conj', 'TO-ME'), ('with', 'adpobj', 'TO-ME', 'adpmod', 'in'), ('flute', 'conj', 'TO-ME'), ('guitar', 'conj', 'FROM-ME'), ('voice', 'conj', 'TO-ME'), ('cum', 'compmod', 'TO-ME'), ('bandoneon', 'conj', 'TO-ME'), ('replace', 'adpobj', 'TO-ME', 'adpmod', 'on'), ('major', 'adpobj', 'FROM-ME', 'adpmod', 'in'), ('drum', 'conj', 'FROM-ME')]
+['institutionalize', 'revolving', 'marilyn', 'mozart', 'cello', 'pedal', 'sonata', 'keyboard', 'quintet', 'guitar', 'violin', 'bass', 'drum', 'vocal', 'arrangement', 'instrument', 'jazz', 'electric', 'recording', 'consist']
+['viennese', 'accompaniment', 'shuffle', 'shit', 'percussion', 'cello', 'flute', 'keyboard', 'guitar', 'arrangement', 'bass', 'jazz', 'electric', 'normal', 'voice', 'aid', 'performance', 'consist', 'style', 'study']
+
+
+the 54217
+, 52376
+. 41820
+a 31280
+be 28952
+of 27913
+and 24452
+to 21058
+in 20298
+after 9180
+for 6830
+on 6087
+with 6079
+have 6022
+( 5923
+that 5753
+) 5725
+by 5463
+it 5219
+an 4972
+he 4608
+'s 4594
+his 4580
+from 4079
+at 3982
+all 3554
+also 3393
+`` 3138
+although 2833
+'' 2769
+not 2763
+which 2463
+this 2420
+or 2340
+accord 2131
+i 1991
+their 1788
+one 1772
+new 1753
+do 1714
+who 1623
+her 1617
+use 1612
+but 1592
+year 1582
+they 1512
+first 1427
+make 1389
+other 1346
+state 1345
+
+
+adpmod 112190
+adpobj 108553
+p 105572
+det 92880
+compmod 76889
+nsubj 59100
+amod 53621
+ROOT 43667
+dobj 34676
+conj 31467
+advmod 30163
+cc 28991
+aux 21006
+poss 14604
+num 14537
+auxpass 13951
+nsubjpass 12546
+mark 11525
+xcomp 9970
+adpcomp 8542
+advcl 7937
+attr 7728
+rcmod 7225
+partmod 6876
+ccomp 6528
+dep 6446
+appos 5773
+adp 4987
+acomp 4921
+mwe 3457
+neg 3267
+prt 2011
+nmod 1978
+infmod 1370
+parataxis 1074
+expl 855
+rel 470
+csubj 289
+iobj 279
+csubjpass 1
+
+num of words above 100 count: 1021
+
+
+defaultdict(<class 'float'>, {'words count': 10.263237476348877, 'dependency': 10.24891710281372, 'windows': 8.984602451324463, 'tuple code': 3.2026920318603516, 'words code': 83.95280694961548, 'windows code': 4.75951886177063})
+
+

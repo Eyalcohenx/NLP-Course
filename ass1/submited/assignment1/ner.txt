@@ -1,0 +1,44 @@
+Accuracies on the dev set:
+NER - token accuracy
+HMM-Greedy:    94.88%
+HMM-viterbi:   96.24%
+MaxEnt-greedy: 96.53%
+MEMM-viterbi:  97.76%
+NER - span precision
+HMM-Greedy:    72.57%
+HMM-viterbi:   83.33%
+MaxEnt-greedy: 87.92%
+MEMM-viterbi:  89.13%
+NER - span recall
+HMM-Greedy:    73.64%
+HMM-viterbi:   78.56%
+MaxEnt-greedy: 79.88%
+MEMM-viterbi:  88.67%
+NER - span f1 score
+HMM-Greedy:    73.1%
+HMM-viterbi:   80.87%
+MaxEnt-greedy: 73.71%
+MEMM-viterbi:  88.90%
+
+
+The NER results are lower than POS results because in NER much of the necessary information for tagging does
+not exist in the text itself, but relies on outside knowledge of the entities. In POS tagging, there are many 
+hints for the correct tagging: word suffixes, capitalization, and previous tags. But in NER tagging, there 
+are fewer hints and previous tags are less informative.
+
+
+ Why are span scores lower than accuracy scores?
+
+Most of the tags in the ner data are ‘O’ tags, which can be easily predicted by the tagger, and thus elevate the per token accuracy, 
+while they are ignored by the span scores evaluation.
+Span scores evaluation is more stringent, in that it classifies a prediction as true only if all tokens in the span are predicted correctly, 
+while per token accuracy gives partial scores for partially correct span predictions. 
+ example, if the prediction for the span “People’s/I-LOC Republic/I-LOC  Of/I-LOC  China/I-LOC”  is instead:
+“People’s/O  Republic/I-LOC  Of/I-LOC  China/I-LOC”, the per token accuracy for the span is 0.75, but the span score is 0. 
+
+attempts to improve the MEMM tagger for the NER data:
+We added more features to the MaxEnt model: word signatures, including suffixes and prefixes, for 2 words before each
+word and 2 words after, to help the model to learn from the context: for example, if the next word ends with 'ed' it is probably a verb, 
+and therefore the current word is more likely to be (although not necessarily) a person , etc.
+
+
