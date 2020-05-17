@@ -1,11 +1,6 @@
 ###### Assignment 4 NLP Course ######
 
 
-# Details:
-Yehoshua Stern 314963927
-Eyal Cohen 207947086
-
-
 # Requierments:
 pickle, sklearn, networkx, spacy.
 spacy - recomended to download en_core_web_lg for better score, still the rogram will run with the normal en package
